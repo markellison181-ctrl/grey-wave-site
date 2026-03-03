@@ -1,7 +1,8 @@
 'use client'
 
 import { useState } from 'react'
-import { Share2, Twitter, Linkedin, Mail, Copy, Check } from 'lucide-react'
+import { Share2, Linkedin, Mail, Copy, Check } from 'lucide-react'
+import XIcon from '@/components/icons/XIcon'
 
 interface ArticleShareProps {
   title: string
@@ -19,7 +20,7 @@ export default function ArticleShare({ title, url, description = '', className =
   const encodedDescription = encodeURIComponent(description)
   
   const shareLinks = {
-    twitter: `https://twitter.com/intent/tweet?text=${encodedTitle}&url=${encodedUrl}&via=jamesbaxter_cre`,
+    twitter: `https://x.com/intent/tweet?text=${encodedTitle}&url=${encodedUrl}&via=jamesbaxter_cre`,
     linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`,
     email: `mailto:?subject=${encodedTitle}&body=${encodedDescription}%0A%0A${encodedUrl}`,
   }
@@ -63,8 +64,8 @@ export default function ArticleShare({ title, url, description = '', className =
                 className="flex items-center px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md transition-colors"
                 onClick={() => setIsOpen(false)}
               >
-                <Twitter className="h-4 w-4 mr-3" />
-                Share on Twitter
+                <XIcon className="h-4 w-4 mr-3" />
+                Share on X
               </a>
               
               <a

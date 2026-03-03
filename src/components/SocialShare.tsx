@@ -1,7 +1,8 @@
 'use client'
 
 import { useState } from 'react'
-import { Share2, Copy, Check, Twitter, Linkedin, Mail } from 'lucide-react'
+import { Share2, Copy, Check, Linkedin, Mail } from 'lucide-react'
+import XIcon from '@/components/icons/XIcon'
 
 interface SocialShareProps {
   title?: string
@@ -26,7 +27,7 @@ export default function SocialShare({
   const encodedUrl = encodeURIComponent(shareUrl)
 
   const shareLinks = {
-    twitter: `https://twitter.com/intent/tweet?text=${encodedTitle}&url=${encodedUrl}&via=jamesbaxter_cre`,
+    twitter: `https://x.com/intent/tweet?text=${encodedTitle}&url=${encodedUrl}&via=jamesbaxter_cre`,
     linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`,
     email: `mailto:?subject=${encodedTitle}&body=${encodedDescription}%0A%0A${encodedUrl}`
   }
@@ -55,7 +56,7 @@ export default function SocialShare({
           className="p-2 text-slate-600 hover:text-blue-500 hover:bg-blue-50 rounded-lg transition-colors"
           aria-label="Share on Twitter"
         >
-          <Twitter className="h-4 w-4" />
+          <XIcon className="h-4 w-4" />
         </a>
         
         <a

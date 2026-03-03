@@ -1,4 +1,4 @@
-import { Twitter } from 'lucide-react'
+import XIcon from '@/components/icons/XIcon'
 
 export default function Footer() {
   return (
@@ -18,7 +18,7 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold mb-4">Connect</h4>
             <div className="flex items-center space-x-2 text-slate-300">
-              <Twitter size={16} />
+              <XIcon size={16} />
               <a
                 href="https://x.com/jamesbaxter_cre"
                 target="_blank"
