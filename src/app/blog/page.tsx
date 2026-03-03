@@ -30,7 +30,7 @@ export default function BlogIndex() {
             for Canada's seniors housing industry.
           </p>
           <p className="text-navy-300">
-            9 deep-dive reports • Updated weekly
+            10 deep-dive reports • Updated weekly
           </p>
         </div>
       </section>
@@ -39,13 +39,52 @@ export default function BlogIndex() {
         <div className="max-w-5xl mx-auto px-6 sm:px-8 lg:px-12">
           
           <div className="space-y-16">
-            {/* Latest Article - March 8 */}
-            <Link href="/blog/ontario-89000-unit-shortage-analysis" className="block group">
+            {/* Latest Article - March 3 - Benchmarks */}
+            <Link href="/blog/seniors-housing-operator-benchmarks-2026" className="block group">
               <article className="border-b border-navy-100 pb-16 hover:pb-12 transition-all duration-300">
                 <div className="flex flex-wrap items-center gap-4 text-sm text-navy-600 mb-6">
                   <span className="bg-gold-100 text-gold-800 px-4 py-2 rounded-full font-semibold">
                     Latest
                   </span>
+                  <div className="flex items-center">
+                    <Calendar className="h-4 w-4 mr-2" />
+                    <span className="font-medium">March 3, 2026</span>
+                  </div>
+                  <div className="flex items-center">
+                    <User className="h-4 w-4 mr-2" />
+                    <span className="font-medium">James Baxter</span>
+                  </div>
+                  <span className="text-navy-500">22 min read</span>
+                </div>
+                
+                <h2 className="text-3xl md:text-4xl font-bold text-navy-900 mb-6 group-hover:text-navy-700 transition-colors leading-tight">
+                  Canadian Seniors Housing Operator Benchmarks 2026: What Good Looks Like
+                </h2>
+                
+                <p className="text-xl text-navy-700 mb-8 leading-relaxed">
+                  The definitive guide to seniors housing operator performance in Canada. Revenue per suite 
+                  benchmarks by care level, staffing ratios, NOI targets, expense breakdowns, and what separates 
+                  top-quartile operators from bottom-quartile. The numbers operators would print out and tape to their wall.
+                </p>
+                
+                <div className="flex flex-wrap items-center justify-between gap-4">
+                  <div className="flex flex-wrap gap-3 text-sm text-navy-600">
+                    <span className="bg-navy-100 px-3 py-1 rounded-full font-medium">Benchmarks</span>
+                    <span className="bg-navy-100 px-3 py-1 rounded-full font-medium">Operator Performance</span>
+                    <span className="bg-navy-100 px-3 py-1 rounded-full font-medium">NOI Analysis</span>
+                  </div>
+                  <div className="inline-flex items-center text-navy-700 group-hover:text-navy-900 font-semibold group">
+                    Read benchmarks guide
+                    <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
+              </article>
+            </Link>
+
+            {/* March 8 Article */}
+            <Link href="/blog/ontario-89000-unit-shortage-analysis" className="block group">
+              <article className="border-b border-navy-100 pb-16 hover:pb-12 transition-all duration-300">
+                <div className="flex flex-wrap items-center gap-4 text-sm text-navy-600 mb-6">
                   <div className="flex items-center">
                     <Calendar className="h-4 w-4 mr-2" />
                     <span className="font-medium">March 8, 2026</span>
