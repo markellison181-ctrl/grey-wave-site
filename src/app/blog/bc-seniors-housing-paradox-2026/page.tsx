@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "BC's Seniors Housing Paradox: Why the Most Expensive Province Has the Weakest Pipeline | The Grey Wave",
@@ -150,6 +151,20 @@ export default function BCHousingParadoxPost() {
           <p className="text-gray-300 leading-relaxed text-lg">
             <strong className="text-white">The cap rate compression story isn't helping.</strong> Vancouver metro seniors housing assets trade at 4.8-5.2% cap rates — 100+ basis points below Ontario comparables. That means higher valuations, but also higher required NOI to justify development costs.
           </p>
+
+          <div className="my-12 text-center">
+            <Image 
+              src="/charts/development-costs.png" 
+              alt="Development cost per suite comparison by Canadian region showing BC's premium pricing structure"
+              width={800} 
+              height={500} 
+              className="mx-auto rounded-lg shadow-lg border border-emerald-500/20" 
+            />
+            <p className="text-sm text-gray-400 mt-2 italic">
+              Regional development costs per seniors housing suite demonstrate BC's structural cost disadvantages 
+              compared to other Canadian markets, driving the affordability crisis.
+            </p>
+          </div>
 
           <p className="text-gray-300 leading-relaxed text-lg">
             At $3,980/suite/month required NOI and typical 35% operating expense ratios, gross revenue needs to hit $6,100+/month per suite before you're breaking even on new development. Add management fees, debt service if leveraged, and a reasonable return buffer, and you're at $7,500-8,500/month in required gross rents. <strong className="text-emerald-400">That's how you get to $8,200 retirement suites in Vancouver.</strong>

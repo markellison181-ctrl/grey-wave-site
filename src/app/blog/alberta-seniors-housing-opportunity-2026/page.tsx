@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Alberta's Seniors Housing Opportunity: What the Oil Money Built and What Comes Next | The Grey Wave",
@@ -82,6 +83,20 @@ export default function AlbertaSeniorsHousingOpportunityPost() {
           <p className="text-gray-300 leading-relaxed text-lg">
             <strong className="text-white">Alberta's 75+ population will grow 89% between 2025 and 2035.</strong> That's not a typo. While Ontario grows at 67% and BC at 71%, Alberta's growth rate reflects both in-migration and the oil wealth generation hitting prime seniors housing age.
           </p>
+
+          <div className="my-12 text-center">
+            <Image 
+              src="/charts/population-growth.png" 
+              alt="Provincial 75+ population growth projections showing Alberta's dramatic demographic shift"
+              width={800} 
+              height={500} 
+              className="mx-auto rounded-lg shadow-lg border border-emerald-500/20" 
+            />
+            <p className="text-sm text-gray-400 mt-2 italic">
+              Canada's 75+ population growth projections demonstrate the scale of the demographic wave, 
+              with Alberta experiencing some of the most dramatic shifts in the prime seniors housing cohort.
+            </p>
+          </div>
 
           <p className="text-gray-300 leading-relaxed text-lg">
             More importantly, Alberta seniors have money. The average net worth of Albertans aged 65+ is $847,000—second only to BC, but with housing costs 40% lower. <strong className="text-emerald-400">That gap matters when you're underwriting assisted living at $4,500/month versus $7,200 in Vancouver.</strong>

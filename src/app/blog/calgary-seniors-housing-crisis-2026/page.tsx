@@ -5,6 +5,7 @@ import SocialShare from '@/components/SocialShare'
 import RelatedArticles from '@/components/RelatedArticles'
 import { Calendar, User, ArrowLeft, Clock } from 'lucide-react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -129,6 +130,20 @@ export default function BlogPost() {
               The math doesn't lie. Calgary's 75+ population is growing 4% annually. New supply? Maybe 1%. 
               This isn't a temporary imbalance. It's a structural crisis that's getting worse every quarter.
             </p>
+
+            <div className="my-12 text-center">
+              <Image 
+                src="/charts/vacancy-rates.png" 
+                alt="Provincial seniors housing vacancy rates across Canada showing Calgary's critically low vacancy situation"
+                width={800} 
+                height={500} 
+                className="mx-auto rounded-lg shadow-lg border border-navy-200" 
+              />
+              <p className="text-sm text-navy-600 mt-2 italic">
+                Provincial seniors housing vacancy rates highlight the severity of supply shortages across Canada, 
+                with Alberta showing particularly tight market conditions.
+              </p>
+            </div>
 
             <h2 className="text-3xl md:text-4xl font-bold text-navy-900 mt-16 mb-8 leading-[1.2]">Why Calgary's Crisis is Different</h2>
 
