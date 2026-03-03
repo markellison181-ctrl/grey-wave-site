@@ -1,7 +1,9 @@
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 import NewsletterSignup from '@/components/NewsletterSignup'
-import { Calendar, User, ArrowLeft } from 'lucide-react'
+import SocialShare from '@/components/SocialShare'
+import RelatedArticles from '@/components/RelatedArticles'
+import { Calendar, User, ArrowLeft, Clock } from 'lucide-react'
 import Link from 'next/link'
 import { Metadata } from 'next'
 
@@ -23,12 +25,12 @@ export default function BlogPost() {
       <Header />
       
       <article className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12 py-20">
-        <Link href="/blog" className="inline-flex items-center text-navy-600 hover:text-navy-900 mb-12 font-medium">
+        <Link href="/blog" className="inline-flex items-center text-navy-600 hover:text-navy-900 mb-12 font-medium transition-colors">
           <ArrowLeft className="h-4 w-4 mr-2" />
           Back to Analysis
         </Link>
 
-        <header className="mb-16">
+        <header className="mb-20">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-navy-900 mb-8 leading-[1.1] tracking-tight">
             Calgary's Seniors Housing Vacancy Crisis: The Data We Lost and What It Reveals
           </h1>
@@ -43,122 +45,166 @@ export default function BlogPost() {
               <Calendar className="h-5 w-5 mr-3" />
               <span className="font-medium">March 3, 2026</span>
             </div>
+            <span className="text-navy-400">•</span>
+            <div className="flex items-center">
+              <Clock className="h-5 w-5 mr-3" />
+              <span className="font-medium">12 min read</span>
+            </div>
           </div>
           
-          <p className="text-xl md:text-2xl text-navy-700 leading-[1.6] font-light">
+          <p className="text-xl md:text-2xl text-navy-700 leading-[1.7] font-light max-w-4xl">
             CMHC killed the Seniors Housing Survey in 2021. The only comprehensive dataset — gone. 
             Now Calgary's hitting historic vacancy lows while everyone's flying blind. Here's what 
             15 years on the development side tells me about the crisis coming to Alberta.
           </p>
         </header>
 
-        <div className="prose prose-lg prose-navy max-w-none prose-headings:font-bold prose-headings:text-navy-900 prose-p:text-navy-700 prose-p:text-lg prose-p:leading-[1.7] prose-li:text-navy-700 prose-li:text-lg prose-li:leading-[1.7] prose-strong:text-navy-900 prose-a:text-navy-700 prose-a:underline hover:prose-a:text-navy-900 prose-h2:text-3xl prose-h2:mt-16 prose-h2:mb-8">
-          <p>
-            Everyone's building luxury retirement. The real opportunity is in affordable assisted living. 
-            But first, let me tell you about the data problem that's making this crisis invisible.
-          </p>
+        <div className="max-w-3xl mx-auto">
+          <div className="article-content space-y-8 text-lg text-navy-700 leading-[1.7]">
+            <p>
+              Everyone's building luxury retirement. The real opportunity is in affordable assisted living. 
+              But first, let me tell you about the data problem that's making this crisis invisible.
+            </p>
 
-          <h2>The Data Black Hole</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-navy-900 mt-16 mb-8 leading-[1.2]">The Data Black Hole</h2>
 
-          <p>
-            In 2021, CMHC quietly discontinued the Seniors Housing Survey. No fanfare. No replacement. 
-            Just gone. For 15 years, it was the only standardized data source tracking vacancy rates, 
-            rent levels, and absorption in seniors housing across Canada. Operators, investors, and 
-            developers relied on it for market analysis.
-          </p>
+            <p>
+              In 2021, CMHC quietly discontinued the Seniors Housing Survey. No fanfare. No replacement. 
+              Just gone. For 15 years, it was the only standardized data source tracking vacancy rates, 
+              rent levels, and absorption in seniors housing across Canada. Operators, investors, and 
+              developers relied on it for market analysis.
+            </p>
 
-          <p>
-            Now we're operating on anecdotes and operator surveys. It's like trying to navigate the 
-            oil sands with a paper road map from 1995.
-          </p>
+            <p>
+              Now we're operating on anecdotes and operator surveys. It's like trying to navigate the 
+              oil sands with a paper road map from 1995.
+            </p>
 
-          <p>
-            The irony? Canada's seniors housing sector is experiencing the most significant demographic 
-            shift in a generation, and we're doing it with worse data than we had five years ago. 
-            CMHC still publishes rental market reports quarterly. Seniors housing? Radio silence.
-          </p>
+            <p>
+              The irony? Canada's seniors housing sector is experiencing the most significant demographic 
+              shift in a generation, and we're doing it with worse data than we had five years ago. 
+              CMHC still publishes rental market reports quarterly. Seniors housing? Radio silence.
+            </p>
 
-          <p>
-            This isn't just inconvenient. It's dangerous. Without reliable market data, operators make 
-            location mistakes. Developers overbuild in saturated markets while underserved areas get 
-            ignored. Capital allocation becomes guesswork.
-          </p>
+            <p>
+              This isn't just inconvenient. It's dangerous. Without reliable market data, operators make 
+              location mistakes. Developers overbuild in saturated markets while underserved areas get 
+              ignored. Capital allocation becomes guesswork.
+            </p>
 
-          <h2>The Calgary Numbers (What We Can Still Track)</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-navy-900 mt-16 mb-8 leading-[1.2]">The Calgary Numbers (What We Can Still Track)</h2>
 
-          <p>
-            Here's what I've been able to piece together from Alberta Health Services licensing data, 
-            construction permits, and operator surveys I run myself:
-          </p>
+            <p>
+              Here's what I've been able to piece together from Alberta Health Services licensing data, 
+              construction permits, and operator surveys I run myself:
+            </p>
 
-          <ul>
-            <li><strong>Calgary CMA licensed beds (2026):</strong> 12,847</li>
-            <li><strong>Current vacancy rate:</strong> Sub-1% across all care levels</li>
-            <li><strong>Average waitlist time:</strong> 14-18 months</li>
-            <li><strong>New supply under construction:</strong> 387 units</li>
-            <li><strong>Population 75+ growth rate (Calgary):</strong> 4.2% annually</li>
-          </ul>
+            <div className="bg-navy-50 border-l-4 border-navy-400 p-8 my-8 rounded-r-lg">
+              <h3 className="font-bold text-navy-900 mb-4 text-xl">Calgary CMA Key Metrics (2026)</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-navy-700">
+                <div>
+                  <div className="font-semibold">Licensed beds:</div>
+                  <div className="text-2xl font-bold text-navy-900">12,847</div>
+                </div>
+                <div>
+                  <div className="font-semibold">Current vacancy rate:</div>
+                  <div className="text-2xl font-bold text-navy-900">Sub-1%</div>
+                </div>
+                <div>
+                  <div className="font-semibold">Average waitlist time:</div>
+                  <div className="text-2xl font-bold text-navy-900">14-18 months</div>
+                </div>
+                <div>
+                  <div className="font-semibold">New supply under construction:</div>
+                  <div className="text-2xl font-bold text-navy-900">387 units</div>
+                </div>
+                <div className="md:col-span-2">
+                  <div className="font-semibold">Population 75+ growth rate (Calgary):</div>
+                  <div className="text-2xl font-bold text-navy-900">4.2% annually</div>
+                </div>
+              </div>
+            </div>
 
-          <p>
-            The math doesn't lie. Calgary's 75+ population is growing 4% annually. New supply? Maybe 1%. 
-            This isn't a temporary imbalance. It's a structural crisis that's getting worse every quarter.
-          </p>
+            <p className="text-xl font-semibold text-navy-900 my-8">
+              The math doesn't lie. Calgary's 75+ population is growing 4% annually. New supply? Maybe 1%. 
+              This isn't a temporary imbalance. It's a structural crisis that's getting worse every quarter.
+            </p>
 
-          <h2>Why Calgary's Crisis is Different</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-navy-900 mt-16 mb-8 leading-[1.2]">Why Calgary's Crisis is Different</h2>
 
-          <p>
-            Every major Canadian market has seniors housing challenges. But Calgary's situation has three 
-            unique factors that make it particularly acute:
-          </p>
+            <p>
+              Every major Canadian market has seniors housing challenges. But Calgary's situation has three 
+              unique factors that make it particularly acute:
+            </p>
 
-          <p>
-            <strong>The Oil Boom Cohort</strong><br />
-            Between 1975-2005, Calgary's population doubled during successive oil booms. Unlike Toronto 
-            or Vancouver where growth was steadier, Calgary absorbed massive cohorts of 25-45 year olds 
-            in concentrated waves. Those cohorts are hitting 75-85 now. The demographic bulge isn't gradual 
-            — it's a tsunami.
-          </p>
+            <div className="space-y-8 my-12">
+              <div className="border-l-4 border-gold-400 pl-6">
+                <h3 className="text-xl font-bold text-navy-900 mb-3">The Oil Boom Cohort</h3>
+                <p>
+                  Between 1975-2005, Calgary's population doubled during successive oil booms. Unlike Toronto 
+                  or Vancouver where growth was steadier, Calgary absorbed massive cohorts of 25-45 year olds 
+                  in concentrated waves. Those cohorts are hitting 75-85 now. The demographic bulge isn't gradual 
+                  — it's a tsunami.
+                </p>
+              </div>
 
-          <p>
-            <strong>The Family Scatter Pattern</strong><br />
-            Oil boom workers came from everywhere. Their kids left for university and never returned, or 
-            moved to other provinces for careers. Traditional family support networks that help seniors 
-            age in place are scattered from Victoria to St. John's. When health declines, there's no 
-            daughter in Calgary to help. It's straight to seniors housing.
-          </p>
+              <div className="border-l-4 border-gold-400 pl-6">
+                <h3 className="text-xl font-bold text-navy-900 mb-3">The Family Scatter Pattern</h3>
+                <p>
+                  Oil boom workers came from everywhere. Their kids left for university and never returned, or 
+                  moved to other provinces for careers. Traditional family support networks that help seniors 
+                  age in place are scattered from Victoria to St. John's. When health declines, there's no 
+                  daughter in Calgary to help. It's straight to seniors housing.
+                </p>
+              </div>
 
-          <p>
-            <strong>Housing Stock Mismatch</strong><br />
-            Calgary built massive suburban subdivisions for families. Two-story homes, basements, big yards. 
-            Perfect for raising kids. Terrible for seniors with mobility issues. The city has roughly 
-            380,000 single-family homes and maybe 15,000 seniors-appropriate housing units. When you need 
-            to downsize at 78, your options are severely limited.
-          </p>
+              <div className="border-l-4 border-gold-400 pl-6">
+                <h3 className="text-xl font-bold text-navy-900 mb-3">Housing Stock Mismatch</h3>
+                <p>
+                  Calgary built massive suburban subdivisions for families. Two-story homes, basements, big yards. 
+                  Perfect for raising kids. Terrible for seniors with mobility issues. The city has roughly 
+                  380,000 single-family homes and maybe 15,000 seniors-appropriate housing units. When you need 
+                  to downsize at 78, your options are severely limited.
+                </p>
+              </div>
+            </div>
 
-          <h2>The Supply-Demand Mathematics</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-navy-900 mt-16 mb-8 leading-[1.2]">The Supply-Demand Mathematics</h2>
 
-          <p>
-            Let's run the numbers using Statistics Canada's latest population projections. Under their 
-            medium-growth scenario (M1), Alberta's 75+ population grows from 180,400 in 2021 to 327,600 
-            by 2043. Calgary represents roughly 35% of Alberta's seniors population, so we're looking at:
-          </p>
+            <p>
+              Let's run the numbers using Statistics Canada's latest population projections. Under their 
+              medium-growth scenario (M1), Alberta's 75+ population grows from 180,400 in 2021 to 327,600 
+              by 2043. Calgary represents roughly 35% of Alberta's seniors population, so we're looking at:
+            </p>
 
-          <ul>
-            <li><strong>Calgary 75+ population (2021):</strong> ~63,000</li>
-            <li><strong>Calgary 75+ population (2030):</strong> ~92,000</li>
-            <li><strong>Calgary 75+ population (2043):</strong> ~115,000</li>
-          </ul>
+            <div className="bg-gradient-to-r from-navy-50 to-gold-50 p-8 rounded-xl my-8">
+              <h3 className="text-xl font-bold text-navy-900 mb-6">Calgary 75+ Population Projections</h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="text-center">
+                  <div className="text-sm text-navy-600 font-semibold">2021 (baseline)</div>
+                  <div className="text-3xl font-bold text-navy-900">~63,000</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-sm text-navy-600 font-semibold">2030 (projected)</div>
+                  <div className="text-3xl font-bold text-navy-900">~92,000</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-sm text-navy-600 font-semibold">2043 (projected)</div>
+                  <div className="text-3xl font-bold text-navy-900">~115,000</div>
+                </div>
+              </div>
+            </div>
 
-          <p>
-            Industry research shows approximately 12-15% of the 75+ population eventually requires 
-            seniors housing. That means Calgary needs roughly 13,800 seniors housing beds by 2043. 
-            Current supply? 12,847 beds.
-          </p>
+            <p>
+              Industry research shows approximately 12-15% of the 75+ population eventually requires 
+              seniors housing. That means Calgary needs roughly 13,800 seniors housing beds by 2043. 
+              Current supply? 12,847 beds.
+            </p>
 
-          <p>
-            We're essentially at capacity now, with 23 years of demographic growth ahead of us. And 
-            the construction pipeline is anemic.
-          </p>
+            <p className="text-xl font-semibold text-navy-900 bg-red-50 border-l-4 border-red-400 p-6 my-8">
+              We're essentially at capacity now, with 23 years of demographic growth ahead of us. And 
+              the construction pipeline is anemic.
+            </p>
 
           <h2>Construction Reality Check</h2>
 
@@ -407,19 +453,59 @@ export default function BlogPost() {
             sector this critical to Canada's aging population.
           </p>
 
-          <div className="bg-navy-50 p-6 rounded-lg mt-8">
-            <h3 className="font-bold text-navy-900 mb-3">About the Author</h3>
-            <p className="text-navy-700">
+          <div className="bg-navy-50 p-8 rounded-xl mt-12">
+            <h3 className="text-xl font-bold text-navy-900 mb-4">About the Author</h3>
+            <p className="text-navy-700 leading-relaxed">
               James Baxter has been developing seniors housing in Calgary for 15 years, with experience 
               on both the lending and development sides. He currently has three seniors housing projects 
               under development across Alberta and maintains The Grey Wave newsletter tracking Canadian 
               demographic and housing trends. Contact: james@seniorshousingcanada.ca
             </p>
           </div>
+          </div>
+
+          {/* Share this article */}
+          <div className="max-w-3xl mx-auto mt-16 pt-12 border-t border-navy-200">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-bold text-navy-900 mb-4">Share this analysis</h3>
+              <p className="text-navy-600 mb-6">
+                Help colleagues understand Calgary's seniors housing crisis. The numbers tell a story that needs wider circulation.
+              </p>
+            </div>
+            <div className="flex justify-center">
+              <SocialShare 
+                title="Calgary's Seniors Housing Vacancy Crisis: The Data We Lost and What It Reveals"
+                description="CMHC killed the Seniors Housing Survey in 2021. Now Calgary hits historic vacancy lows. Analysis by James Baxter."
+              />
+            </div>
+          </div>
+
+          {/* Newsletter CTA */}
+          <div className="max-w-3xl mx-auto mt-16">
+            <div className="bg-gradient-to-r from-navy-900 to-navy-700 text-white p-8 rounded-xl">
+              <div className="text-center">
+                <h3 className="text-2xl font-bold mb-4">Get The Grey Wave Newsletter</h3>
+                <p className="text-navy-200 mb-6 text-lg leading-relaxed">
+                  Weekly insights on Canada's seniors housing crisis. Market data, policy analysis, and demographic trends 
+                  that shape investment decisions. Join 2,400+ industry professionals.
+                </p>
+                <Link 
+                  href="/#newsletter" 
+                  className="inline-block bg-gold-400 text-navy-900 px-8 py-4 rounded-lg font-semibold hover:bg-gold-300 transition-colors"
+                >
+                  Subscribe to The Grey Wave
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          {/* Related Articles */}
+          <div className="max-w-5xl mx-auto mt-20">
+            <RelatedArticles currentArticle="calgary-seniors-housing-crisis-2026" />
+          </div>
         </div>
       </article>
 
-      <NewsletterSignup />
       <Footer />
     </div>
   )

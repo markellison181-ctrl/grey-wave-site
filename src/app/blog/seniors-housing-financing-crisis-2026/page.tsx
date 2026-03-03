@@ -1,7 +1,9 @@
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 import NewsletterSignup from '@/components/NewsletterSignup'
-import { Calendar, User, ArrowLeft } from 'lucide-react'
+import SocialShare from '@/components/SocialShare'
+import RelatedArticles from '@/components/RelatedArticles'
+import { Calendar, User, ArrowLeft, Clock } from 'lucide-react'
 import Link from 'next/link'
 import { Metadata } from 'next'
 
@@ -22,80 +24,112 @@ export default function BlogPost() {
     <div className="min-h-screen bg-white">
       <Header />
       
-      <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <Link href="/blog" className="inline-flex items-center text-navy-600 hover:text-navy-900 mb-8">
+      <article className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12 py-20">
+        <Link href="/blog" className="inline-flex items-center text-navy-600 hover:text-navy-900 mb-12 font-medium transition-colors">
           <ArrowLeft className="h-4 w-4 mr-2" />
-          Back to blog
+          Back to Analysis
         </Link>
 
-        <header className="mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-navy-900 mb-6">
+        <header className="mb-20">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-navy-900 mb-8 leading-[1.1] tracking-tight">
             The Seniors Housing Financing Crisis: What Actually Pencils in 2026
           </h1>
           
-          <div className="flex items-center space-x-6 text-navy-600 mb-6">
+          <div className="flex flex-wrap items-center gap-6 text-navy-600 mb-8 text-lg">
             <div className="flex items-center">
-              <User className="h-4 w-4 mr-2" />
-              <span>James Baxter</span>
+              <User className="h-5 w-5 mr-3" />
+              <span className="font-medium">James Baxter</span>
             </div>
+            <span className="text-navy-400">•</span>
             <div className="flex items-center">
-              <Calendar className="h-4 w-4 mr-2" />
-              <span>March 3, 2026</span>
+              <Calendar className="h-5 w-5 mr-3" />
+              <span className="font-medium">March 3, 2026</span>
+            </div>
+            <span className="text-navy-400">•</span>
+            <div className="flex items-center">
+              <Clock className="h-5 w-5 mr-3" />
+              <span className="font-medium">18 min read</span>
             </div>
           </div>
           
-          <p className="text-xl text-navy-700 leading-relaxed">
+          <p className="text-xl md:text-2xl text-navy-700 leading-[1.7] font-light max-w-4xl">
             Construction costs are up 47% since 2021. Prime rate hit 6.45%. CMHC is getting pickier about 
             seniors housing projects. Meanwhile, we're facing the biggest demographic wave in Canadian history. 
             Here's the math on what actually gets built in this environment.
           </p>
         </header>
 
-        <div className="prose prose-lg max-w-none">
-          <p>
-            I've been financing seniors housing projects in Western Canada for 15 years. I've never seen 
-            a financing environment this challenging, with fundamentals this strong. The demographic need 
-            has never been clearer — but the economics have never been tougher.
-          </p>
+        <div className="max-w-3xl mx-auto">
+          <div className="article-content space-y-8 text-lg text-navy-700 leading-[1.7]">
+            <p>
+              I've been financing seniors housing projects in Western Canada for 15 years. I've never seen 
+              a financing environment this challenging, with fundamentals this strong. The demographic need 
+              has never been clearer — but the economics have never been tougher.
+            </p>
 
-          <p>
-            Last week, I ran pro formas on three different seniors housing projects across Alberta and BC. 
-            Two years ago, all three would have been slam dunks. Today? One barely works, one needs major 
-            redesign, and one is shelved indefinitely.
-          </p>
+            <p>
+              Last week, I ran pro formas on three different seniors housing projects across Alberta and BC. 
+              Two years ago, all three would have been slam dunks. Today? One barely works, one needs major 
+              redesign, and one is shelved indefinitely.
+            </p>
 
-          <p>
-            If you're an operator looking for expansion capital, a developer trying to pencil new projects, 
-            or institutional money trying to understand what's happening in Canadian seniors housing, here's 
-            what the financing landscape actually looks like right now.
-          </p>
+            <p>
+              If you're an operator looking for expansion capital, a developer trying to pencil new projects, 
+              or institutional money trying to understand what's happening in Canadian seniors housing, here's 
+              what the financing landscape actually looks like right now.
+            </p>
 
-          <h2>The Numbers That Changed Everything</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-navy-900 mt-16 mb-8 leading-[1.2]">The Numbers That Changed Everything</h2>
 
-          <p>
-            Let me start with the data that matters. These are the numbers that killed feasibility for most 
-            seniors housing projects in the past 18 months:
-          </p>
+            <p>
+              Let me start with the data that matters. These are the numbers that killed feasibility for most 
+              seniors housing projects in the past 18 months:
+            </p>
 
-          <ul>
-            <li><strong>Construction costs (2026 vs 2021):</strong> +47% average across major Canadian markets</li>
-            <li><strong>Prime lending rate:</strong> 6.45% (vs 2.45% in 2021)</li>
-            <li><strong>Construction lending rates:</strong> Prime + 1.5-2.5% (8-9% all-in)</li>
-            <li><strong>Permanent mortgage rates (seniors housing):</strong> 6.8-7.4%</li>
-            <li><strong>CMHC MLI Select approval rate:</strong> Down 38% from 2024 levels</li>
-            <li><strong>Average DSCR requirement:</strong> 1.25-1.35 (up from 1.15-1.25)</li>
-          </ul>
+            <div className="bg-red-50 border-l-4 border-red-400 p-8 my-8 rounded-r-lg">
+              <h3 className="font-bold text-navy-900 mb-4 text-xl">Financing Environment Shift (2021 vs 2026)</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-navy-700">
+                <div>
+                  <div className="font-semibold">Construction costs increase:</div>
+                  <div className="text-2xl font-bold text-red-700">+47%</div>
+                </div>
+                <div>
+                  <div className="font-semibold">Prime lending rate:</div>
+                  <div className="text-2xl font-bold text-red-700">6.45%</div>
+                  <div className="text-sm text-red-600">(vs 2.45% in 2021)</div>
+                </div>
+                <div>
+                  <div className="font-semibold">Construction lending rates:</div>
+                  <div className="text-2xl font-bold text-red-700">8-9%</div>
+                  <div className="text-sm text-red-600">Prime + 1.5-2.5%</div>
+                </div>
+                <div>
+                  <div className="font-semibold">Permanent mortgage rates:</div>
+                  <div className="text-2xl font-bold text-red-700">6.8-7.4%</div>
+                </div>
+                <div>
+                  <div className="font-semibold">CMHC MLI Select approvals:</div>
+                  <div className="text-2xl font-bold text-red-700">-38%</div>
+                  <div className="text-sm text-red-600">vs 2024 levels</div>
+                </div>
+                <div>
+                  <div className="font-semibold">DSCR requirements:</div>
+                  <div className="text-2xl font-bold text-red-700">1.25-1.35</div>
+                  <div className="text-sm text-red-600">(up from 1.15-1.25)</div>
+                </div>
+              </div>
+            </div>
 
-          <p>
-            Here's what those numbers mean in practice: A 120-unit assisted living project that required 
-            $18M in financing in 2021 now needs $26.5M. The debt service on that financing went from 
-            $1.1M annually to $2.1M annually.
-          </p>
+            <p className="text-xl font-semibold text-navy-900 bg-yellow-50 border-l-4 border-yellow-400 p-6 my-8">
+              Here's what those numbers mean in practice: A 120-unit assisted living project that required 
+              $18M in financing in 2021 now needs $26.5M. The debt service on that financing went from 
+              $1.1M annually to $2.1M annually.
+            </p>
 
-          <p>
-            Meanwhile, what can you charge residents? The same demographic paying rent can't suddenly 
-            afford double the monthly fees because construction got expensive.
-          </p>
+            <p>
+              Meanwhile, what can you charge residents? The same demographic paying rent can't suddenly 
+              afford double the monthly fees because construction got expensive.
+            </p>
 
           <h2>CMHC MLI Select: The New Reality</h2>
 
@@ -505,18 +539,58 @@ export default function BlogPost() {
             </ul>
           </div>
 
-          <div className="bg-navy-50 p-6 rounded-lg mt-8">
-            <h3 className="font-bold text-navy-900 mb-3">About the Author</h3>
-            <p className="text-navy-700">
+          <div className="bg-navy-50 p-8 rounded-xl mt-12">
+            <h3 className="text-xl font-bold text-navy-900 mb-4">About the Author</h3>
+            <p className="text-navy-700 leading-relaxed">
               James Baxter has been developing and financing seniors housing projects across Western Canada 
               for 15 years. He's currently working on seniors housing developments in Alberta and BC, and 
               writes The Grey Wave newsletter on Canadian demographics and housing policy.
             </p>
           </div>
+          </div>
+
+          {/* Share this article */}
+          <div className="max-w-3xl mx-auto mt-16 pt-12 border-t border-navy-200">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-bold text-navy-900 mb-4">Share this analysis</h3>
+              <p className="text-navy-600 mb-6">
+                Share the real numbers behind Canada's seniors housing financing crisis. These insights matter for industry decisions.
+              </p>
+            </div>
+            <div className="flex justify-center">
+              <SocialShare 
+                title="The Seniors Housing Financing Crisis: What Actually Pencils in 2026"
+                description="Construction costs up 47%, prime rates at 6.45%, and CMHC getting pickier. Analysis by James Baxter."
+              />
+            </div>
+          </div>
+
+          {/* Newsletter CTA */}
+          <div className="max-w-3xl mx-auto mt-16">
+            <div className="bg-gradient-to-r from-navy-900 to-navy-700 text-white p-8 rounded-xl">
+              <div className="text-center">
+                <h3 className="text-2xl font-bold mb-4">Get The Grey Wave Newsletter</h3>
+                <p className="text-navy-200 mb-6 text-lg leading-relaxed">
+                  Weekly insights on Canada's seniors housing crisis. Market data, policy analysis, and demographic trends 
+                  that shape investment decisions. Join 2,400+ industry professionals.
+                </p>
+                <Link 
+                  href="/#newsletter" 
+                  className="inline-block bg-gold-400 text-navy-900 px-8 py-4 rounded-lg font-semibold hover:bg-gold-300 transition-colors"
+                >
+                  Subscribe to The Grey Wave
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          {/* Related Articles */}
+          <div className="max-w-5xl mx-auto mt-20">
+            <RelatedArticles currentArticle="seniors-housing-financing-crisis-2026" />
+          </div>
         </div>
       </article>
 
-      <NewsletterSignup />
       <Footer />
     </div>
   )

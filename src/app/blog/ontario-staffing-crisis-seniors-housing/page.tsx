@@ -1,7 +1,9 @@
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 import NewsletterSignup from '@/components/NewsletterSignup'
-import { Calendar, User, ArrowLeft } from 'lucide-react'
+import SocialShare from '@/components/SocialShare'
+import RelatedArticles from '@/components/RelatedArticles'
+import { Calendar, User, ArrowLeft, Clock } from 'lucide-react'
 import Link from 'next/link'
 import { Metadata } from 'next'
 
@@ -23,12 +25,12 @@ export default function BlogPost() {
       <Header />
       
       <article className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12 py-20">
-        <Link href="/blog" className="inline-flex items-center text-navy-600 hover:text-navy-900 mb-12 font-medium">
+        <Link href="/blog" className="inline-flex items-center text-navy-600 hover:text-navy-900 mb-12 font-medium transition-colors">
           <ArrowLeft className="h-4 w-4 mr-2" />
           Back to Analysis
         </Link>
 
-        <header className="mb-16">
+        <header className="mb-20">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-navy-900 mb-8 leading-[1.1] tracking-tight">
             Ontario's Seniors Housing Staffing Crisis: The Numbers Nobody's Talking About
           </h1>
@@ -43,9 +45,14 @@ export default function BlogPost() {
               <Calendar className="h-5 w-5 mr-3" />
               <span className="font-medium">March 3, 2026</span>
             </div>
+            <span className="text-navy-400">•</span>
+            <div className="flex items-center">
+              <Clock className="h-5 w-5 mr-3" />
+              <span className="font-medium">15 min read</span>
+            </div>
           </div>
           
-          <p className="text-xl md:text-2xl text-navy-700 leading-[1.6] font-light">
+          <p className="text-xl md:text-2xl text-navy-700 leading-[1.7] font-light max-w-4xl">
             Turnover hit 47% in Ontario retirement homes last year. Personal Support Workers make less 
             than grocery clerks. The RHRA logged 1,658 inspections and 247 complaints — many staffing-related. 
             Here's what the crisis actually costs operators, and why it's killing development feasibility 
@@ -53,7 +60,8 @@ export default function BlogPost() {
           </p>
         </header>
 
-        <div className="prose prose-lg prose-navy max-w-none prose-headings:font-bold prose-headings:text-navy-900 prose-p:text-navy-700 prose-p:text-lg prose-p:leading-[1.7] prose-li:text-navy-700 prose-li:text-lg prose-li:leading-[1.7] prose-strong:text-navy-900 prose-a:text-navy-700 prose-a:underline hover:prose-a:text-navy-900 prose-h2:text-3xl prose-h2:mt-16 prose-h2:mb-8">
+        <div className="max-w-3xl mx-auto">
+          <div className="article-content space-y-8 text-lg text-navy-700 leading-[1.7]">
           <p>
             Ontario has 781 licensed retirement homes. Most can't find enough staff to operate at capacity. 
             The industry pretends this is a temporary post-COVID adjustment. It's not. It's a structural 
@@ -666,19 +674,59 @@ export default function BlogPost() {
             in Ontario's seniors housing sector. Better data would support better policy and investment decisions.
           </p>
 
-          <div className="bg-navy-50 p-6 rounded-lg mt-8">
-            <h3 className="font-bold text-navy-900 mb-3">About the Author</h3>
-            <p className="text-navy-700">
+          <div className="bg-navy-50 p-8 rounded-xl mt-12">
+            <h3 className="text-xl font-bold text-navy-900 mb-4">About the Author</h3>
+            <p className="text-navy-700 leading-relaxed">
               James Baxter has been developing seniors housing across Canada for 15 years, with particular 
               focus on Ontario markets since 2018. He currently has two seniors housing projects under 
               development in Ontario and maintains The Grey Wave newsletter tracking demographic trends 
-              and operational challenges across Canadian seniors housing. Contact: james@greywave.ca
+              and operational challenges across Canadian seniors housing. Contact: james@seniorshousingcanada.ca
             </p>
+          </div>
+          </div>
+
+          {/* Share this article */}
+          <div className="max-w-3xl mx-auto mt-16 pt-12 border-t border-navy-200">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-bold text-navy-900 mb-4">Share this analysis</h3>
+              <p className="text-navy-600 mb-6">
+                Help operators and investors understand the true cost of Ontario's staffing crisis. These numbers matter for feasibility planning.
+              </p>
+            </div>
+            <div className="flex justify-center">
+              <SocialShare 
+                title="Ontario's Seniors Housing Staffing Crisis: The Numbers Nobody's Talking About"
+                description="Turnover hit 47% in Ontario retirement homes. PSW wages lag grocery clerks. Analysis by James Baxter."
+              />
+            </div>
+          </div>
+
+          {/* Newsletter CTA */}
+          <div className="max-w-3xl mx-auto mt-16">
+            <div className="bg-gradient-to-r from-navy-900 to-navy-700 text-white p-8 rounded-xl">
+              <div className="text-center">
+                <h3 className="text-2xl font-bold mb-4">Get The Grey Wave Newsletter</h3>
+                <p className="text-navy-200 mb-6 text-lg leading-relaxed">
+                  Weekly insights on Canada's seniors housing crisis. Market data, policy analysis, and demographic trends 
+                  that shape investment decisions. Join 2,400+ industry professionals.
+                </p>
+                <Link 
+                  href="/#newsletter" 
+                  className="inline-block bg-gold-400 text-navy-900 px-8 py-4 rounded-lg font-semibold hover:bg-gold-300 transition-colors"
+                >
+                  Subscribe to The Grey Wave
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          {/* Related Articles */}
+          <div className="max-w-5xl mx-auto mt-20">
+            <RelatedArticles currentArticle="ontario-staffing-crisis-seniors-housing" />
           </div>
         </div>
       </article>
 
-      <NewsletterSignup />
       <Footer />
     </div>
   )
