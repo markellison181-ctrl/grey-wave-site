@@ -152,16 +152,16 @@ export default function BlogIndex() {
               </article>
             </Link>
 
-            {/* Coming Soon Articles */}
-            <div className="bg-navy-50 p-12 rounded-2xl">
-              <h3 className="text-3xl md:text-4xl font-bold text-navy-900 mb-12 text-center">Coming Soon</h3>
+            {/* Upcoming Analysis */}
+            <div className="mt-20 pt-12 border-t border-navy-200">
+              <div className="text-center mb-16">
+                <h3 className="text-3xl md:text-4xl font-bold text-navy-900 mb-6">Coming Up</h3>
+                <p className="text-xl text-navy-600">Weekly analysis launches March 4th</p>
+              </div>
               
               <div className="space-y-8">
-                <div className="border-l-4 border-gold-500 pl-8 py-4">
-                  <div className="flex items-center text-sm text-navy-600 mb-3">
-                    <Calendar className="h-4 w-4 mr-2" />
-                    <span className="font-medium">March 15, 2026</span>
-                  </div>
+                <div className="border-l-4 border-navy-900 pl-8 py-4">
+                  <div className="text-sm text-navy-600 mb-3">March 15, 2026</div>
                   <h4 className="text-xl md:text-2xl font-bold text-navy-900 mb-4 leading-tight">
                     The $4.2B Federal Funding Gap: Where the Money Really Goes
                   </h4>
@@ -171,78 +171,26 @@ export default function BlogIndex() {
                   </p>
                 </div>
 
-                <div className="border-l-4 border-gold-500 pl-8 py-4">
-                  <div className="flex items-center text-sm text-navy-600 mb-3">
-                    <Calendar className="h-4 w-4 mr-2" />
-                    <span className="font-medium">March 22, 2026</span>
-                  </div>
+                <div className="border-l-4 border-navy-900 pl-8 py-4">
+                  <div className="text-sm text-navy-600 mb-3">March 22, 2026</div>
                   <h4 className="text-xl md:text-2xl font-bold text-navy-900 mb-4 leading-tight">
                     Why Every Provincial Housing Plan Ignores Seniors
                   </h4>
                   <p className="text-navy-700 text-lg leading-relaxed">
                     Provincial governments love announcing housing targets. But when you read the fine print, 
-                    seniors housing gets maybe 5% of the attention. Here's why that's a problem.
+                    seniors housing gets maybe 5% of the attention.
                   </p>
                 </div>
 
-                <div className="border-l-4 border-gold-500 pl-8 py-4">
-                  <div className="flex items-center text-sm text-navy-600 mb-3">
-                    <Calendar className="h-4 w-4 mr-2" />
-                    <span className="font-medium">March 29, 2026</span>
-                  </div>
+                <div className="border-l-4 border-navy-900 pl-8 py-4">
+                  <div className="text-sm text-navy-600 mb-3">March 29, 2026</div>
                   <h4 className="text-xl md:text-2xl font-bold text-navy-900 mb-4 leading-tight">
                     BC vs Alberta: Two Models for Seniors Housing Policy
                   </h4>
                   <p className="text-navy-700 text-lg leading-relaxed">
-                    British Columbia and Alberta have taken completely different approaches to seniors housing 
-                    development. Five years in, the results tell us everything about what works and what doesn't.
+                    Two completely different approaches to seniors housing development. 
+                    Five years in, the results tell us everything about what works and what doesn't.
                   </p>
-                </div>
-
-                <div className="border-l-4 border-gold-500 pl-8 py-4">
-                  <div className="flex items-center text-sm text-navy-600 mb-3">
-                    <Calendar className="h-4 w-4 mr-2" />
-                    <span className="font-medium">April 5, 2026</span>
-                  </div>
-                  <h4 className="text-xl md:text-2xl font-bold text-navy-900 mb-4 leading-tight">
-                    The Memory Care Crisis: Why Dementia Housing is the Next Shortage
-                  </h4>
-                  <p className="text-navy-700 text-lg leading-relaxed">
-                    Canada has 597,000 people with dementia today. By 2050: 1.7 million. The specialized 
-                    housing they need barely exists. Here's what the math looks like.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Categories */}
-            <div className="mt-20">
-              <div className="text-center mb-12">
-                <h3 className="text-3xl md:text-4xl font-bold text-navy-900 mb-6">Browse by Topic</h3>
-                <p className="text-xl text-navy-600 leading-relaxed">
-                  Deep analysis across the key areas driving Canada's seniors housing market.
-                </p>
-              </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div className="bg-white border border-navy-200 p-8 rounded-2xl text-center hover:shadow-lg hover:border-navy-300 transition-all duration-300 hover:-translate-y-1">
-                  <h4 className="font-bold text-navy-900 mb-4 text-xl">Market Analysis</h4>
-                  <p className="text-navy-600 leading-relaxed">Vacancy rates, construction data, regional trends</p>
-                </div>
-                
-                <div className="bg-white border border-navy-200 p-8 rounded-2xl text-center hover:shadow-lg hover:border-navy-300 transition-all duration-300 hover:-translate-y-1">
-                  <h4 className="font-bold text-navy-900 mb-4 text-xl">Demographics</h4>
-                  <p className="text-navy-600 leading-relaxed">Population projections, aging trends, migration patterns</p>
-                </div>
-                
-                <div className="bg-white border border-navy-200 p-8 rounded-2xl text-center hover:shadow-lg hover:border-navy-300 transition-all duration-300 hover:-translate-y-1">
-                  <h4 className="font-bold text-navy-900 mb-4 text-xl">Policy Analysis</h4>
-                  <p className="text-navy-600 leading-relaxed">Government programs, funding, regulatory changes</p>
-                </div>
-                
-                <div className="bg-white border border-navy-200 p-8 rounded-2xl text-center hover:shadow-lg hover:border-navy-300 transition-all duration-300 hover:-translate-y-1">
-                  <h4 className="font-bold text-navy-900 mb-4 text-xl">Regional Focus</h4>
-                  <p className="text-navy-600 leading-relaxed">Province and city-specific analysis</p>
                 </div>
               </div>
             </div>
