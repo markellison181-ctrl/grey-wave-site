@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { supabase } from '@/lib/supabase'
 import { Mail, Check, AlertCircle } from 'lucide-react'
 
@@ -9,6 +9,18 @@ export default function NewsletterSignup() {
   const [loading, setLoading] = useState(false)
   const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle')
   const [message, setMessage] = useState('')
+  const [referrer, setReferrer] = useState<string | null>(null)
+
+  useEffect(() => {
+    // Check for referrer parameter in URL
+    if (typeof window !== 'undefined') {
+      const urlParams = new URLSearchParams(window.location.search)
+      const ref = urlParams.get('ref')
+      if (ref) {
+        setReferrer(ref)
+      }
+    }
+  }, [])
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -36,7 +48,8 @@ export default function NewsletterSignup() {
         .insert([
           {
             email: email.toLowerCase(),
-            source: 'website',
+            source: referrer ? 'referral' : 'website',
+            referrer: referrer,
             created_at: new Date().toISOString()
           }
         ])
@@ -65,12 +78,19 @@ export default function NewsletterSignup() {
         
         <h2 className="text-3xl font-bold text-slate-900 mb-4">
           Join The Grey Wave
+          <span className="ml-3 bg-red-500 text-white text-sm px-3 py-1 rounded-full">FREE</span>
         </h2>
         
         <p className="text-xl text-slate-700 mb-8 max-w-2xl mx-auto">
           Get weekly insights on Canada's aging population, seniors housing trends, 
           and demographic data that matters to industry professionals.
         </p>
+
+        {referrer && (
+          <p className="text-sm text-slate-600 mb-4 bg-amber-50 border border-amber-200 rounded-lg p-3 max-w-md mx-auto">
+            👋 Referred by a colleague? You're joining Canada's most-read seniors housing newsletter.
+          </p>
+        )}
 
         <form onSubmit={handleSubmit} className="max-w-md mx-auto">
           <div className="flex flex-col sm:flex-row gap-3">
