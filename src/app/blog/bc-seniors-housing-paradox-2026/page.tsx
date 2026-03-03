@@ -377,9 +377,9 @@ export default function BCHousingParadoxPost() {
         <div className="border-t border-emerald-500/20 pt-12">
           <h3 className="text-2xl font-bold mb-6">Related Articles</h3>
           <div className="space-y-3">
-            <Link href="/blog/ontario-staffing-crisis-seniors-housing" className="block p-4 rounded-lg border border-emerald-500/20 hover:border-emerald-500/40 hover:bg-emerald-500/5 transition-all">
+            <Link href="/blog/calgary-seniors-housing-crisis-2026" className="block p-4 rounded-lg border border-emerald-500/20 hover:border-emerald-500/40 hover:bg-emerald-500/5 transition-all">
               <span className="text-emerald-400 text-sm font-medium">→</span>
-              <span className="ml-2 text-gray-200 hover:text-white">Ontario's Seniors Housing Staffing Crisis: The Numbers Nobody's Talking About</span>
+              <span className="ml-2 text-gray-200 hover:text-white">Calgary's Seniors Housing Crisis: What 0.8% Vacancy Really Means</span>
             </Link>
             <Link href="/blog/ontario-89000-unit-shortage-analysis" className="block p-4 rounded-lg border border-emerald-500/20 hover:border-emerald-500/40 hover:bg-emerald-500/5 transition-all">
               <span className="text-emerald-400 text-sm font-medium">→</span>

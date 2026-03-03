@@ -78,42 +78,6 @@ export default function BlogIndex() {
             </Link>
 
             {/* Recent Articles */}
-            <Link href="/blog/ontario-staffing-crisis-seniors-housing" className="block group">
-              <article className="border-b border-navy-100 pb-16 hover:pb-12 transition-all duration-300">
-                <div className="flex flex-wrap items-center gap-4 text-sm text-navy-600 mb-6">
-                  <div className="flex items-center">
-                    <Calendar className="h-4 w-4 mr-2" />
-                    <span className="font-medium">March 3, 2026</span>
-                  </div>
-                  <div className="flex items-center">
-                    <User className="h-4 w-4 mr-2" />
-                    <span className="font-medium">James Baxter</span>
-                  </div>
-                </div>
-                
-                <h2 className="text-2xl md:text-3xl font-bold text-navy-900 mb-6 group-hover:text-navy-700 transition-colors leading-tight">
-                  Ontario's Seniors Housing Staffing Crisis: The Numbers Nobody's Talking About
-                </h2>
-                
-                <p className="text-lg text-navy-700 mb-8 leading-relaxed">
-                  Turnover hit 47% in Ontario retirement homes. PSW wages lag grocery clerks. Here's what 
-                  the staffing crisis really costs operators, developers, and investors — and why it's 
-                  killing development feasibility across the province.
-                </p>
-                
-                <div className="flex flex-wrap items-center justify-between gap-4">
-                  <div className="flex flex-wrap gap-3 text-sm text-navy-600">
-                    <span className="bg-navy-100 px-3 py-1 rounded-full font-medium">Staffing</span>
-                    <span className="bg-navy-100 px-3 py-1 rounded-full font-medium">Ontario</span>
-                    <span className="bg-navy-100 px-3 py-1 rounded-full font-medium">Operations</span>
-                  </div>
-                  <div className="inline-flex items-center text-navy-700 group-hover:text-navy-900 font-semibold group">
-                    Read article
-                    <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </div>
-                </div>
-              </article>
-            </Link>
             <Link href="/blog/seniors-housing-financing-crisis-2026" className="block group">
               <article className="border-b border-navy-100 pb-16 hover:pb-12 transition-all duration-300">
                 <div className="flex flex-wrap items-center gap-4 text-sm text-navy-600 mb-6">
