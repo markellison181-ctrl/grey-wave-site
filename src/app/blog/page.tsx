@@ -78,6 +78,43 @@ export default function BlogIndex() {
             </Link>
 
             {/* Recent Articles */}
+            <Link href="/blog/atlantic-canada-seniors-housing-boom-2026" className="block group">
+              <article className="border-b border-navy-100 pb-16 hover:pb-12 transition-all duration-300">
+                <div className="flex flex-wrap items-center gap-4 text-sm text-navy-600 mb-6">
+                  <div className="flex items-center">
+                    <Calendar className="h-4 w-4 mr-2" />
+                    <span className="font-medium">March 3, 2026</span>
+                  </div>
+                  <div className="flex items-center">
+                    <User className="h-4 w-4 mr-2" />
+                    <span className="font-medium">James Baxter</span>
+                  </div>
+                </div>
+                
+                <h2 className="text-2xl md:text-3xl font-bold text-navy-900 mb-6 group-hover:text-navy-700 transition-colors leading-tight">
+                  Atlantic Canada's Quiet Seniors Housing Boom: Why the Smartest Developers Are Looking East
+                </h2>
+                
+                <p className="text-lg text-navy-700 mb-8 leading-relaxed">
+                  While Ontario and BC struggle with expensive land and regulatory delays, Atlantic Canada offers 
+                  compelling fundamentals: Ontario retiree migration, $280K/suite development costs vs $540K+ in BC, 
+                  and CMHC financing advantages that smart money is starting to notice.
+                </p>
+                
+                <div className="flex flex-wrap items-center justify-between gap-4">
+                  <div className="flex flex-wrap gap-3 text-sm text-navy-600">
+                    <span className="bg-navy-100 px-3 py-1 rounded-full font-medium">Market Analysis</span>
+                    <span className="bg-navy-100 px-3 py-1 rounded-full font-medium">Atlantic Canada</span>
+                    <span className="bg-navy-100 px-3 py-1 rounded-full font-medium">Migration</span>
+                  </div>
+                  <div className="inline-flex items-center text-navy-700 group-hover:text-navy-900 font-semibold group">
+                    Read article
+                    <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
+              </article>
+            </Link>
+
             <Link href="/blog/alberta-seniors-housing-opportunity-2026" className="block group">
               <article className="border-b border-navy-100 pb-16 hover:pb-12 transition-all duration-300">
                 <div className="flex flex-wrap items-center gap-4 text-sm text-navy-600 mb-6">
