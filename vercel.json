@@ -1,0 +1,21 @@
+{
+  "github": {
+    "enabled": true
+  },
+  "functions": {
+    "src/app/**": {
+      "maxDuration": 30
+    }
+  },
+  "redirects": [
+    {
+      "source": "/seniorshousingcanada.ca",
+      "destination": "/",
+      "permanent": true
+    }
+  ],
+  "env": {
+    "NEXT_PUBLIC_SUPABASE_URL": "https://vsbwqlkbcgvmphuqfgqb.supabase.co",
+    "NEXT_PUBLIC_SUPABASE_ANON_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZzYndxbGtiY2d2bXBodXFmZ3FiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzA4MTgyMjYsImV4cCI6MjA4NjM5NDIyNn0.wGbB-LZl3UfnE1iNz9pR9dyGuc-bFoP8cxZ90toxSHg"
+  }
+}
