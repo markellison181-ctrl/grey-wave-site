@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { supabase } from '@/lib/supabase'
 import { Mail, Check, AlertCircle } from 'lucide-react'
 
 export default function NewsletterSignup() {
@@ -28,40 +27,34 @@ export default function NewsletterSignup() {
     setStatus('idle')
 
     try {
-      // Check if email already exists
-      const { data: existingSubscriber } = await supabase
-        .from('subscribers')
-        .select('id')
-        .eq('email', email)
-        .single()
+      const response = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email: email.toLowerCase(),
+          source: referrer ? 'referral' : 'website',
+          referrer: referrer,
+        }),
+      })
 
-      if (existingSubscriber) {
-        setStatus('error')
-        setMessage('This email is already subscribed to The Grey Wave.')
-        setLoading(false)
-        return
+      const data = await response.json()
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Something went wrong')
       }
 
-      // Insert new subscriber
-      const { error } = await supabase
-        .from('subscribers')
-        .insert([
-          {
-            email: email.toLowerCase(),
-            source: referrer ? 'referral' : 'website',
-            referrer: referrer,
-            created_at: new Date().toISOString()
-          }
-        ])
-
-      if (error) throw error
-
       setStatus('success')
-      setMessage('You\'re on the list! The Grey Wave launches March 4, 2026.')
+      setMessage('Welcome to The Grey Wave! Check your email for a welcome message.')
       setEmail('')
     } catch (error: any) {
       setStatus('error')
-      setMessage(error.message || 'Something went wrong. Please try again.')
+      if (error.message.includes('already subscribed')) {
+        setMessage('This email is already subscribed to The Grey Wave.')
+      } else {
+        setMessage(error.message || 'Something went wrong. Please try again.')
+      }
     } finally {
       setLoading(false)
     }
