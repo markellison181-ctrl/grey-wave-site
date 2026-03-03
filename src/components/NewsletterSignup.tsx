@@ -61,27 +61,29 @@ export default function NewsletterSignup() {
   }
 
   return (
-    <section id="subscribe" className="bg-navy-50 py-24">
-      <div className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12 text-center">
-        <div className="mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-navy-900 mb-6 leading-tight">
+    <section id="subscribe" className="bg-gradient-to-br from-navy-50 to-gold-50/20 py-16 sm:py-20 md:py-24 relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(15,28,46,0.05)_0%,transparent_50%)]"></div>
+      <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 text-center">
+        <div className="mb-10 sm:mb-12">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-navy-900 mb-4 sm:mb-6 leading-tight">
             Join The Grey Wave
           </h2>
           
-          <p className="text-xl text-navy-700 mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl text-navy-700 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed">
             Get weekly insights on Canada's aging population, seniors housing market data, 
             and demographic trends. Every Tuesday, in your inbox.
           </p>
         </div>
 
         {referrer && (
-          <p className="text-sm text-slate-600 mb-6 bg-gold-50 border border-gold-200 rounded-lg p-3 max-w-md mx-auto">
+          <div className="text-sm text-slate-600 mb-6 bg-gold-50 border border-gold-200 rounded-lg p-3 max-w-md mx-auto shadow-sm">
             👋 Referred by a colleague? Welcome to Canada's most data-driven seniors housing newsletter.
-          </p>
+          </div>
         )}
 
-        <form onSubmit={handleSubmit} className="max-w-lg mx-auto">
-          <div className="flex flex-col sm:flex-row gap-4">
+        <form onSubmit={handleSubmit} className="max-w-lg mx-auto mb-8">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
             <input
               type="email"
               value={email}
@@ -89,12 +91,12 @@ export default function NewsletterSignup() {
               placeholder="Enter your email address"
               required
               disabled={loading}
-              className="flex-1 px-6 py-4 border border-navy-200 rounded-lg focus:ring-2 focus:ring-navy-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed text-lg bg-white shadow-sm"
+              className="flex-1 px-4 sm:px-6 py-3 sm:py-4 border border-navy-200 rounded-lg focus:ring-2 focus:ring-navy-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed text-base sm:text-lg bg-white shadow-sm placeholder:text-navy-400"
             />
             <button
               type="submit"
               disabled={loading || !email}
-              className="bg-navy-900 hover:bg-navy-800 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 whitespace-nowrap disabled:opacity-50 disabled:cursor-not-allowed hover:shadow-lg hover:-translate-y-0.5"
+              className="bg-navy-900 hover:bg-navy-800 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg transition-all duration-200 whitespace-nowrap disabled:opacity-50 disabled:cursor-not-allowed hover:shadow-lg hover:-translate-y-0.5 shadow-md"
             >
               {loading ? 'Subscribing...' : 'Subscribe'}
             </button>
