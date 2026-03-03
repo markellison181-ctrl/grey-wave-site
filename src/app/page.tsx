@@ -108,45 +108,88 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Sample Analysis - Content First */}
+      {/* Latest Analysis - Featured Articles */}
       <section className="py-24 bg-navy-50">
         <div className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-navy-900 mb-8 leading-tight">
-              Sample Analysis
+              Latest Analysis
             </h2>
             <p className="text-xl text-navy-600 leading-relaxed">
-              The kind of market intelligence you'll get every week.
+              Fresh market intelligence every week. Here's what operators are reading.
             </p>
           </div>
           
-          <Link href="/blog/calgary-seniors-housing-crisis-2026" className="block group">
-            <article className="border-l-4 border-navy-900 pl-8 py-6 hover:pl-12 transition-all duration-300">
+          {/* Featured Article */}
+          <Link href="/blog/bc-seniors-housing-paradox-2026" className="block group mb-16">
+            <article className="border-l-4 border-gold-400 pl-8 py-6 hover:pl-12 transition-all duration-300 bg-white/60 rounded-r-xl">
+              <div className="flex items-center gap-3 mb-4">
+                <span className="bg-gold-100 text-gold-800 px-3 py-1 rounded-full text-sm font-semibold">
+                  Featured
+                </span>
+                <span className="text-navy-600 text-sm">18 min read • March 3, 2026</span>
+              </div>
               <h3 className="text-2xl md:text-3xl font-bold text-navy-900 mb-4 group-hover:text-navy-700 transition-colors leading-tight">
-                Calgary's 0.8% Vacancy: Tightest Market in 15 Years
+                BC's Seniors Housing Paradox: Why the Most Expensive Province Has the Weakest Pipeline
               </h3>
               <p className="text-navy-700 mb-6 text-lg leading-relaxed">
-                Calgary hit 0.8% vacancy in Q4 2025—the lowest rate since CMHC began tracking. 
-                Construction permits are up 40% YoY, but delivery won't hit until 2027. What this means for operators and cap rates.
+                Vancouver retirement suites average $8,200/month. Provincial vacancy sits at 2.3%. Yet BC's 
+                seniors housing pipeline is the thinnest per capita in Canada. The math doesn't work for 
+                families or investors.
               </p>
-              <div className="flex flex-wrap items-center gap-4 text-sm text-navy-600">
-                <span className="font-medium">March 3, 2026</span>
-                <span className="text-navy-400">•</span>
-                <span>Market Analysis</span>
-                <span className="text-navy-400">•</span>
-                <span>Data: CMHC, City of Calgary</span>
+              <div className="flex flex-wrap items-center gap-3 text-sm">
+                <span className="bg-navy-100 text-navy-700 px-3 py-1 rounded-full font-medium">BC</span>
+                <span className="bg-navy-100 text-navy-700 px-3 py-1 rounded-full font-medium">Development</span>
+                <span className="bg-navy-100 text-navy-700 px-3 py-1 rounded-full font-medium">Market Analysis</span>
               </div>
             </article>
           </Link>
 
-          <div className="text-center mt-16 pt-12 border-t border-navy-200">
-            <p className="text-navy-600 mb-6 text-lg">
-              The Grey Wave launches Tuesday, March 4th.
-            </p>
-            <Link href="#subscribe" className="inline-flex items-center text-navy-800 hover:text-navy-900 font-semibold text-lg group">
-              Subscribe now
+          {/* Recent Articles Grid */}
+          <div className="grid md:grid-cols-2 gap-8 mb-16">
+            <Link href="/blog/atlantic-canada-seniors-housing-boom-2026" className="block group">
+              <article className="border-l-4 border-navy-200 pl-6 py-4 hover:pl-8 hover:border-navy-400 transition-all duration-300 bg-white/40 rounded-r-xl">
+                <div className="text-navy-600 text-sm mb-3">March 3, 2026 • 12 min read</div>
+                <h3 className="text-xl md:text-2xl font-bold text-navy-900 mb-3 group-hover:text-navy-700 transition-colors leading-tight">
+                  Atlantic Canada's Quiet Seniors Housing Boom
+                </h3>
+                <p className="text-navy-700 mb-4 leading-relaxed">
+                  While Ontario and BC struggle with expensive land and regulatory delays, Atlantic Canada offers 
+                  compelling fundamentals: $280K/suite development costs vs $540K+ in BC.
+                </p>
+                <div className="flex gap-2 text-xs">
+                  <span className="bg-navy-100 text-navy-600 px-2 py-1 rounded font-medium">Atlantic Canada</span>
+                  <span className="bg-navy-100 text-navy-600 px-2 py-1 rounded font-medium">Migration</span>
+                </div>
+              </article>
+            </Link>
+
+            <Link href="/blog/ontario-89000-unit-shortage-analysis" className="block group">
+              <article className="border-l-4 border-navy-200 pl-6 py-4 hover:pl-8 hover:border-navy-400 transition-all duration-300 bg-white/40 rounded-r-xl">
+                <div className="text-navy-600 text-sm mb-3">March 8, 2026 • 15 min read</div>
+                <h3 className="text-xl md:text-2xl font-bold text-navy-900 mb-3 group-hover:text-navy-700 transition-colors leading-tight">
+                  Ontario's 89,000 Unit Gap: Breaking Down the CMHC Numbers
+                </h3>
+                <p className="text-navy-700 mb-4 leading-relaxed">
+                  CMHC projects Ontario needs 89,000 additional seniors housing units by 2035. Here's the 
+                  regional breakdown and why current approaches won't close the gap.
+                </p>
+                <div className="flex gap-2 text-xs">
+                  <span className="bg-navy-100 text-navy-600 px-2 py-1 rounded font-medium">Ontario</span>
+                  <span className="bg-navy-100 text-navy-600 px-2 py-1 rounded font-medium">CMHC</span>
+                </div>
+              </article>
+            </Link>
+          </div>
+
+          <div className="text-center">
+            <Link href="/blog" className="inline-flex items-center text-navy-800 hover:text-navy-900 font-semibold text-lg group">
+              Read all analysis
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Link>
+            <p className="text-navy-600 mt-4">
+              8 deep-dive reports • Updated weekly
+            </p>
           </div>
         </div>
       </section>

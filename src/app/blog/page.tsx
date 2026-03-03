@@ -29,6 +29,9 @@ export default function BlogIndex() {
             In-depth market analysis, demographic trends, and policy insights 
             for Canada's seniors housing industry.
           </p>
+          <p className="text-navy-300">
+            8 deep-dive reports • Updated weekly
+          </p>
         </div>
       </section>
 
@@ -36,13 +39,52 @@ export default function BlogIndex() {
         <div className="max-w-5xl mx-auto px-6 sm:px-8 lg:px-12">
           
           <div className="space-y-16">
-            {/* Featured Article */}
-            <Link href="/blog/saskatchewan-manitoba-seniors-housing-2026" className="block group">
+            {/* Latest Article - March 8 */}
+            <Link href="/blog/ontario-89000-unit-shortage-analysis" className="block group">
               <article className="border-b border-navy-100 pb-16 hover:pb-12 transition-all duration-300">
                 <div className="flex flex-wrap items-center gap-4 text-sm text-navy-600 mb-6">
                   <span className="bg-gold-100 text-gold-800 px-4 py-2 rounded-full font-semibold">
-                    Featured
+                    Latest
                   </span>
+                  <div className="flex items-center">
+                    <Calendar className="h-4 w-4 mr-2" />
+                    <span className="font-medium">March 8, 2026</span>
+                  </div>
+                  <div className="flex items-center">
+                    <User className="h-4 w-4 mr-2" />
+                    <span className="font-medium">James Baxter</span>
+                  </div>
+                  <span className="text-navy-500">15 min read</span>
+                </div>
+                
+                <h2 className="text-3xl md:text-4xl font-bold text-navy-900 mb-6 group-hover:text-navy-700 transition-colors leading-tight">
+                  Ontario's 89,000 Unit Gap: Breaking Down the CMHC Numbers
+                </h2>
+                
+                <p className="text-xl text-navy-700 mb-8 leading-relaxed">
+                  CMHC projects Ontario needs 89,000 additional seniors housing units by 2035. Here's the 
+                  regional breakdown, construction pipeline analysis, and why current approaches won't come 
+                  close to closing the gap.
+                </p>
+                
+                <div className="flex flex-wrap items-center justify-between gap-4">
+                  <div className="flex flex-wrap gap-3 text-sm text-navy-600">
+                    <span className="bg-navy-100 px-3 py-1 rounded-full font-medium">Data Analysis</span>
+                    <span className="bg-navy-100 px-3 py-1 rounded-full font-medium">Ontario</span>
+                    <span className="bg-navy-100 px-3 py-1 rounded-full font-medium">CMHC</span>
+                  </div>
+                  <div className="inline-flex items-center text-navy-700 group-hover:text-navy-900 font-semibold group">
+                    Read full article
+                    <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
+              </article>
+            </Link>
+
+            {/* March 3 Articles */}
+            <Link href="/blog/saskatchewan-manitoba-seniors-housing-2026" className="block group">
+              <article className="border-b border-navy-100 pb-16 hover:pb-12 transition-all duration-300">
+                <div className="flex flex-wrap items-center gap-4 text-sm text-navy-600 mb-6">
                   <div className="flex items-center">
                     <Calendar className="h-4 w-4 mr-2" />
                     <span className="font-medium">March 3, 2026</span>
@@ -51,13 +93,14 @@ export default function BlogIndex() {
                     <User className="h-4 w-4 mr-2" />
                     <span className="font-medium">James Baxter</span>
                   </div>
+                  <span className="text-navy-500">12 min read</span>
                 </div>
                 
-                <h2 className="text-3xl md:text-4xl font-bold text-navy-900 mb-6 group-hover:text-navy-700 transition-colors leading-tight">
+                <h2 className="text-2xl md:text-3xl font-bold text-navy-900 mb-6 group-hover:text-navy-700 transition-colors leading-tight">
                   Saskatchewan & Manitoba Seniors Housing: The Forgotten Opportunity
                 </h2>
                 
-                <p className="text-xl text-navy-700 mb-8 leading-relaxed">
+                <p className="text-lg text-navy-700 mb-8 leading-relaxed">
                   While the coasts struggle with $8,000/month averages and tight land markets, the prairie provinces 
                   offer compelling demographics and development economics that most operators overlook.
                 </p>
@@ -69,14 +112,13 @@ export default function BlogIndex() {
                     <span className="bg-navy-100 px-3 py-1 rounded-full font-medium">Development</span>
                   </div>
                   <div className="inline-flex items-center text-navy-700 group-hover:text-navy-900 font-semibold group">
-                    Read full article
+                    Read article
                     <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </div>
               </article>
             </Link>
 
-            {/* Recent Articles */}
             <Link href="/blog/bc-seniors-housing-paradox-2026" className="block group">
               <article className="border-b border-navy-100 pb-16 hover:pb-12 transition-all duration-300">
                 <div className="flex flex-wrap items-center gap-4 text-sm text-navy-600 mb-6">
@@ -88,13 +130,14 @@ export default function BlogIndex() {
                     <User className="h-4 w-4 mr-2" />
                     <span className="font-medium">James Baxter</span>
                   </div>
+                  <span className="text-navy-500">18 min read</span>
                 </div>
                 
-                <h2 className="text-3xl md:text-4xl font-bold text-navy-900 mb-6 group-hover:text-navy-700 transition-colors leading-tight">
+                <h2 className="text-2xl md:text-3xl font-bold text-navy-900 mb-6 group-hover:text-navy-700 transition-colors leading-tight">
                   BC's Seniors Housing Paradox: Why the Most Expensive Province Has the Weakest Pipeline
                 </h2>
                 
-                <p className="text-xl text-navy-700 mb-8 leading-relaxed">
+                <p className="text-lg text-navy-700 mb-8 leading-relaxed">
                   Vancouver retirement suites average $8,200/month. Provincial vacancy sits at 2.3%. Yet BC's 
                   seniors housing pipeline is the thinnest per capita in Canada. The math doesn't work for 
                   families or investors.
@@ -107,14 +150,13 @@ export default function BlogIndex() {
                     <span className="bg-navy-100 px-3 py-1 rounded-full font-medium">Development</span>
                   </div>
                   <div className="inline-flex items-center text-navy-700 group-hover:text-navy-900 font-semibold group">
-                    Read full article
+                    Read article
                     <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </div>
               </article>
             </Link>
 
-            {/* Recent Articles */}
             <Link href="/blog/atlantic-canada-seniors-housing-boom-2026" className="block group">
               <article className="border-b border-navy-100 pb-16 hover:pb-12 transition-all duration-300">
                 <div className="flex flex-wrap items-center gap-4 text-sm text-navy-600 mb-6">
@@ -126,6 +168,7 @@ export default function BlogIndex() {
                     <User className="h-4 w-4 mr-2" />
                     <span className="font-medium">James Baxter</span>
                   </div>
+                  <span className="text-navy-500">12 min read</span>
                 </div>
                 
                 <h2 className="text-2xl md:text-3xl font-bold text-navy-900 mb-6 group-hover:text-navy-700 transition-colors leading-tight">
@@ -163,6 +206,7 @@ export default function BlogIndex() {
                     <User className="h-4 w-4 mr-2" />
                     <span className="font-medium">James Baxter</span>
                   </div>
+                  <span className="text-navy-500">14 min read</span>
                 </div>
                 
                 <h2 className="text-2xl md:text-3xl font-bold text-navy-900 mb-6 group-hover:text-navy-700 transition-colors leading-tight">
@@ -200,6 +244,7 @@ export default function BlogIndex() {
                     <User className="h-4 w-4 mr-2" />
                     <span className="font-medium">James Baxter</span>
                   </div>
+                  <span className="text-navy-500">16 min read</span>
                 </div>
                 
                 <h2 className="text-2xl md:text-3xl font-bold text-navy-900 mb-6 group-hover:text-navy-700 transition-colors leading-tight">
@@ -237,6 +282,7 @@ export default function BlogIndex() {
                     <User className="h-4 w-4 mr-2" />
                     <span className="font-medium">James Baxter</span>
                   </div>
+                  <span className="text-navy-500">13 min read</span>
                 </div>
                 
                 <h2 className="text-2xl md:text-3xl font-bold text-navy-900 mb-6 group-hover:text-navy-700 transition-colors leading-tight">
@@ -262,45 +308,9 @@ export default function BlogIndex() {
                 </div>
               </article>
             </Link>
-            <Link href="/blog/ontario-89000-unit-shortage-analysis" className="block group">
-              <article className="border-b border-navy-100 pb-16 hover:pb-12 transition-all duration-300">
-                <div className="flex flex-wrap items-center gap-4 text-sm text-navy-600 mb-6">
-                  <div className="flex items-center">
-                    <Calendar className="h-4 w-4 mr-2" />
-                    <span className="font-medium">March 8, 2026</span>
-                  </div>
-                  <div className="flex items-center">
-                    <User className="h-4 w-4 mr-2" />
-                    <span className="font-medium">James Baxter</span>
-                  </div>
-                </div>
-                
-                <h2 className="text-2xl md:text-3xl font-bold text-navy-900 mb-6 group-hover:text-navy-700 transition-colors leading-tight">
-                  Ontario's 89,000 Unit Gap: Breaking Down the CMHC Numbers
-                </h2>
-                
-                <p className="text-lg text-navy-700 mb-8 leading-relaxed">
-                  CMHC projects Ontario needs 89,000 additional seniors housing units by 2035. Here's the 
-                  regional breakdown, construction pipeline analysis, and why current approaches won't come 
-                  close to closing the gap.
-                </p>
-                
-                <div className="flex flex-wrap items-center justify-between gap-4">
-                  <div className="flex flex-wrap gap-3 text-sm text-navy-600">
-                    <span className="bg-navy-100 px-3 py-1 rounded-full font-medium">Data Analysis</span>
-                    <span className="bg-navy-100 px-3 py-1 rounded-full font-medium">Ontario</span>
-                    <span className="bg-navy-100 px-3 py-1 rounded-full font-medium">CMHC</span>
-                  </div>
-                  <div className="inline-flex items-center text-navy-700 group-hover:text-navy-900 font-semibold group">
-                    Read article
-                    <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </div>
-                </div>
-              </article>
-            </Link>
 
             <Link href="/blog/calgary-seniors-housing-crisis-2026" className="block group">
-              <article className="border-b border-navy-100 pb-16 hover:pb-12 transition-all duration-300">
+              <article className="pb-16 hover:pb-12 transition-all duration-300">
                 <div className="flex flex-wrap items-center gap-4 text-sm text-navy-600 mb-6">
                   <div className="flex items-center">
                     <Calendar className="h-4 w-4 mr-2" />
@@ -310,6 +320,7 @@ export default function BlogIndex() {
                     <User className="h-4 w-4 mr-2" />
                     <span className="font-medium">James Baxter</span>
                   </div>
+                  <span className="text-navy-500">11 min read</span>
                 </div>
                 
                 <h2 className="text-2xl md:text-3xl font-bold text-navy-900 mb-6 group-hover:text-navy-700 transition-colors leading-tight">
@@ -335,49 +346,6 @@ export default function BlogIndex() {
                 </div>
               </article>
             </Link>
-
-            {/* Upcoming Analysis */}
-            <div className="mt-20 pt-12 border-t border-navy-200">
-              <div className="text-center mb-16">
-                <h3 className="text-3xl md:text-4xl font-bold text-navy-900 mb-6">Coming Up</h3>
-                <p className="text-xl text-navy-600">Weekly analysis launches March 4th</p>
-              </div>
-              
-              <div className="space-y-8">
-                <div className="border-l-4 border-navy-900 pl-8 py-4">
-                  <div className="text-sm text-navy-600 mb-3">March 15, 2026</div>
-                  <h4 className="text-xl md:text-2xl font-bold text-navy-900 mb-4 leading-tight">
-                    The $4.2B Federal Funding Gap: Where the Money Really Goes
-                  </h4>
-                  <p className="text-navy-700 text-lg leading-relaxed">
-                    Analysis of federal budget allocations versus actual seniors housing need. 
-                    How much money is actually flowing to construction, and what happens to the rest.
-                  </p>
-                </div>
-
-                <div className="border-l-4 border-navy-900 pl-8 py-4">
-                  <div className="text-sm text-navy-600 mb-3">March 22, 2026</div>
-                  <h4 className="text-xl md:text-2xl font-bold text-navy-900 mb-4 leading-tight">
-                    Why Every Provincial Housing Plan Ignores Seniors
-                  </h4>
-                  <p className="text-navy-700 text-lg leading-relaxed">
-                    Provincial governments love announcing housing targets. But when you read the fine print, 
-                    seniors housing gets maybe 5% of the attention.
-                  </p>
-                </div>
-
-                <div className="border-l-4 border-navy-900 pl-8 py-4">
-                  <div className="text-sm text-navy-600 mb-3">March 29, 2026</div>
-                  <h4 className="text-xl md:text-2xl font-bold text-navy-900 mb-4 leading-tight">
-                    BC vs Alberta: Two Models for Seniors Housing Policy
-                  </h4>
-                  <p className="text-navy-700 text-lg leading-relaxed">
-                    Two completely different approaches to seniors housing development. 
-                    Five years in, the results tell us everything about what works and what doesn't.
-                  </p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
