@@ -44,7 +44,7 @@ export default function BlogIndex() {
                 </span>
                 <div className="flex items-center">
                   <Calendar className="h-4 w-4 mr-2" />
-                  <span>March 8, 2026</span>
+                  <span>March 3, 2026</span>
                 </div>
                 <div className="flex items-center">
                   <User className="h-4 w-4 mr-2" />
@@ -53,12 +53,53 @@ export default function BlogIndex() {
               </div>
               
               <h2 className="text-3xl font-bold text-navy-900 mb-4 hover:text-navy-700 transition-colors">
+                <Link href="/blog/seniors-housing-financing-crisis-2026">
+                  The Seniors Housing Financing Crisis: What Actually Pencils in 2026
+                </Link>
+              </h2>
+              
+              <p className="text-lg text-navy-700 mb-6 leading-relaxed">
+                Construction costs up 47%, prime rates at 6.45%, and CMHC getting pickier. Here's the math 
+                on what actually gets built in this environment, and why most seniors housing projects 
+                can't find capital.
+              </p>
+              
+              <div className="flex items-center justify-between">
+                <div className="flex space-x-4 text-sm text-navy-600">
+                  <span className="bg-navy-100 px-2 py-1 rounded">Financing</span>
+                  <span className="bg-navy-100 px-2 py-1 rounded">CMHC</span>
+                  <span className="bg-navy-100 px-2 py-1 rounded">Development</span>
+                </div>
+                <Link 
+                  href="/blog/seniors-housing-financing-crisis-2026"
+                  className="inline-flex items-center text-navy-700 hover:text-navy-900 font-medium"
+                >
+                  Read full article
+                  <ArrowRight className="h-4 w-4 ml-2" />
+                </Link>
+              </div>
+            </article>
+
+            {/* Recent Articles */}
+            <article className="border-b border-gray-200 pb-12">
+              <div className="flex items-center space-x-4 text-sm text-navy-600 mb-4">
+                <div className="flex items-center">
+                  <Calendar className="h-4 w-4 mr-2" />
+                  <span>March 8, 2026</span>
+                </div>
+                <div className="flex items-center">
+                  <User className="h-4 w-4 mr-2" />
+                  <span>James Baxter</span>
+                </div>
+              </div>
+              
+              <h2 className="text-2xl font-bold text-navy-900 mb-4 hover:text-navy-700 transition-colors">
                 <Link href="/blog/ontario-89000-unit-shortage-analysis">
                   Ontario's 89,000 Unit Gap: Breaking Down the CMHC Numbers
                 </Link>
               </h2>
               
-              <p className="text-lg text-navy-700 mb-6 leading-relaxed">
+              <p className="text-navy-700 mb-6 leading-relaxed">
                 CMHC projects Ontario needs 89,000 additional seniors housing units by 2035. Here's the 
                 regional breakdown, construction pipeline analysis, and why current approaches won't come 
                 close to closing the gap.
@@ -74,13 +115,12 @@ export default function BlogIndex() {
                   href="/blog/ontario-89000-unit-shortage-analysis"
                   className="inline-flex items-center text-navy-700 hover:text-navy-900 font-medium"
                 >
-                  Read full article
+                  Read article
                   <ArrowRight className="h-4 w-4 ml-2" />
                 </Link>
               </div>
             </article>
 
-            {/* Recent Articles */}
             <article className="border-b border-gray-200 pb-12">
               <div className="flex items-center space-x-4 text-sm text-navy-600 mb-4">
                 <div className="flex items-center">
