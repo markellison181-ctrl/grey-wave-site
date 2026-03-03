@@ -1,114 +1,111 @@
 'use client'
 
 import { TrendingUp, Users, Home, Calendar } from 'lucide-react'
-import { motion } from 'framer-motion'
 
 const statistics = [
   {
     icon: Users,
     number: '7.3M',
     label: 'Canadians 65+',
-    description: 'Expected to reach 10.9M by 2036',
-    trend: '+49%'
+    description: 'Current population aged 65 and older',
+    trend: '18.5% of population',
+    source: 'StatsCan 2024'
   },
   {
     icon: TrendingUp,
-    number: '23%',
-    label: 'Population 65+',
-    description: 'Projected share by 2036, up from 18.5% today',
-    trend: '+4.5 pts'
+    number: '2.1M',
+    label: 'Turning 75 by 2032',
+    description: 'Canadians entering highest-need age bracket',
+    trend: '85% increase',
+    source: 'StatsCan projections'
   },
   {
     icon: Home,
-    number: '206K',
-    label: 'Seniors Housing Units',
-    description: 'Additional units needed by 2035 across Canada',
-    trend: 'Shortage'
+    number: '1.2%',
+    label: 'National Vacancy',
+    description: 'Seniors housing vacancy rate (Q3 2025)',
+    trend: 'Record low',
+    source: 'CMHC data'
   },
   {
     icon: Calendar,
-    number: '2031',
-    label: 'Peak Impact Year',
-    description: 'When all baby boomers reach age 65',
-    trend: '6 years'
+    number: '18',
+    label: 'Month waitlists',
+    description: 'Average wait time for private-pay seniors housing',
+    trend: 'Up from 12 months in 2022',
+    source: 'Industry surveys'
   }
 ]
 
 export default function KeyStatistics() {
   return (
     <section className="py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-navy-900 mb-4">
             The Numbers Don't Lie
           </h2>
           <p className="text-lg text-navy-700 max-w-3xl mx-auto">
-            Canada faces an unprecedented demographic shift. Here's what the data shows 
-            about our rapidly aging population and the housing challenge ahead.
+            Canada faces an unprecedented demographic shift. Here's what StatsCan and CMHC data 
+            show about our rapidly aging population and the housing crisis ahead.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {statistics.map((stat, index) => (
-            <motion.div
+            <div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
               className="bg-gradient-to-br from-navy-50 to-white p-6 rounded-xl border border-navy-100 hover:shadow-lg transition-shadow duration-300"
             >
               <div className="flex items-center justify-between mb-4">
                 <div className="bg-gold-100 p-3 rounded-lg">
                   <stat.icon className="h-6 w-6 text-gold-700" />
                 </div>
-                <span className="text-sm font-medium text-green-600 bg-green-50 px-2 py-1 rounded-full">
-                  {stat.trend}
+                <span className="text-xs font-medium text-slate-500 bg-slate-50 px-2 py-1 rounded">
+                  {stat.source}
                 </span>
               </div>
               
-              <div className="mb-2">
-                <div className="stat-number">{stat.number}</div>
-                <div className="stat-label">{stat.label}</div>
+              <div className="mb-3">
+                <div className="text-3xl font-bold text-navy-900 mb-1">{stat.number}</div>
+                <div className="text-sm font-semibold text-navy-700 uppercase tracking-wide">{stat.label}</div>
               </div>
               
-              <p className="text-sm text-navy-600 leading-relaxed">
+              <p className="text-sm text-navy-600 leading-relaxed mb-2">
                 {stat.description}
               </p>
-            </motion.div>
+
+              <div className="text-xs text-gold-600 font-medium">
+                {stat.trend}
+              </div>
+            </div>
           ))}
         </div>
 
         <div className="mt-12 bg-navy-900 rounded-xl p-8 text-white">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-            <div>
-              <h3 className="text-2xl font-bold mb-4">The Challenge Ahead</h3>
-              <p className="text-navy-200 mb-6">
-                With vacancy rates in seniors housing below 2% nationally and construction 
-                not keeping pace with demand, Canada needs urgent action. The Grey Wave 
-                tracks these trends weekly with data-driven analysis.
-              </p>
-              <div className="flex space-x-6 text-sm">
-                <div>
-                  <div className="text-gold-400 font-semibold">1.8%</div>
-                  <div className="text-navy-300">Avg. Vacancy Rate</div>
-                </div>
-                <div>
-                  <div className="text-gold-400 font-semibold">15K</div>
-                  <div className="text-navy-300">Units Under Construction</div>
-                </div>
-                <div>
-                  <div className="text-gold-400 font-semibold">$4.2B</div>
-                  <div className="text-navy-300">Investment Gap</div>
-                </div>
+          <div className="text-center">
+            <h3 className="text-2xl font-bold mb-4">The Challenge Ahead</h3>
+            <p className="text-navy-200 mb-6 max-w-3xl mx-auto">
+              With national vacancy rates below 2% and construction not keeping pace with demand, 
+              Canada needs urgent action. The Grey Wave tracks these trends weekly with sourced, 
+              verifiable data—not speculation.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+              <div>
+                <div className="text-2xl font-bold text-gold-400">206K</div>
+                <div className="text-navy-300 text-sm">Additional units needed by 2035</div>
+                <div className="text-xs text-navy-400">CMHC estimates</div>
               </div>
-            </div>
-            
-            <div className="lg:text-right">
-              <blockquote className="text-xl italic text-navy-200 mb-4">
-                "The demographic tsunami is here. We need data-driven solutions, not political soundbites."
-              </blockquote>
-              <cite className="text-gold-400 font-medium">— James Baxter</cite>
+              <div>
+                <div className="text-2xl font-bold text-gold-400">$4.2B</div>
+                <div className="text-navy-300 text-sm">Annual investment gap</div>
+                <div className="text-xs text-navy-400">Federal budget analysis</div>
+              </div>
+              <div>
+                <div className="text-2xl font-bold text-gold-400">8 years</div>
+                <div className="text-navy-300 text-sm">Until peak demand hits</div>
+                <div className="text-xs text-navy-400">StatsCan projections</div>
+              </div>
             </div>
           </div>
         </div>

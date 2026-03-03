@@ -57,7 +57,7 @@ export default function NewsletterSignup() {
       if (error) throw error
 
       setStatus('success')
-      setMessage('Welcome to The Grey Wave! Check your email for confirmation.')
+      setMessage('You\'re on the list! The Grey Wave launches March 4, 2026.')
       setEmail('')
     } catch (error: any) {
       setStatus('error')
@@ -68,27 +68,26 @@ export default function NewsletterSignup() {
   }
 
   return (
-    <div id="subscribe" className="bg-gradient-to-br from-slate-50 to-amber-50 py-16">
+    <div id="subscribe" className="bg-gradient-to-br from-slate-50 to-gold-50 py-16">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="flex justify-center mb-6">
-          <div className="bg-amber-500 p-3 rounded-full">
-            <Mail className="h-8 w-8 text-slate-900" />
+          <div className="bg-gold-500 p-3 rounded-full">
+            <Mail className="h-8 w-8 text-navy-900" />
           </div>
         </div>
         
-        <h2 className="text-3xl font-bold text-slate-900 mb-4">
+        <h2 className="text-3xl font-bold text-navy-900 mb-4">
           Join The Grey Wave
-          <span className="ml-3 bg-red-500 text-white text-sm px-3 py-1 rounded-full">FREE</span>
         </h2>
         
         <p className="text-xl text-slate-700 mb-8 max-w-2xl mx-auto">
-          Get weekly insights on Canada's aging population, seniors housing trends, 
-          and demographic data that matters to industry professionals.
+          Get weekly insights on Canada's aging population, seniors housing market data, 
+          and demographic trends. Every Tuesday, in your inbox.
         </p>
 
         {referrer && (
-          <p className="text-sm text-slate-600 mb-4 bg-amber-50 border border-amber-200 rounded-lg p-3 max-w-md mx-auto">
-            👋 Referred by a colleague? You're joining Canada's most-read seniors housing newsletter.
+          <p className="text-sm text-slate-600 mb-6 bg-gold-50 border border-gold-200 rounded-lg p-3 max-w-md mx-auto">
+            👋 Referred by a colleague? Welcome to Canada's most data-driven seniors housing newsletter.
           </p>
         )}
 
@@ -101,12 +100,12 @@ export default function NewsletterSignup() {
               placeholder="Enter your email"
               required
               disabled={loading}
-              className="flex-1 px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed"
+              className="flex-1 px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-gold-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed"
             />
             <button
               type="submit"
               disabled={loading || !email}
-              className="bg-amber-500 hover:bg-amber-600 text-slate-900 px-6 py-3 rounded-lg font-semibold transition-colors duration-200 whitespace-nowrap disabled:opacity-50 disabled:cursor-not-allowed"
+              className="bg-gold-500 hover:bg-gold-600 text-navy-900 px-6 py-3 rounded-lg font-semibold transition-colors duration-200 whitespace-nowrap disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {loading ? 'Subscribing...' : 'Subscribe'}
             </button>
@@ -126,9 +125,29 @@ export default function NewsletterSignup() {
           </div>
         )}
 
-        <p className="mt-4 text-sm text-slate-600">
-          Free weekly newsletter. No spam, unsubscribe anytime.
+        <p className="mt-6 text-sm text-slate-600">
+          Weekly newsletter. No spam. Unsubscribe anytime.
         </p>
+
+        <div className="mt-8 pt-8 border-t border-slate-200">
+          <p className="text-sm text-slate-500 mb-4">
+            <strong>Data sources we track:</strong> Statistics Canada, CMHC, Provincial Housing Corporations, RHRA
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-slate-600">
+            <div>
+              <div className="font-medium text-slate-800">Demographics</div>
+              <div>Population projections, migration trends</div>
+            </div>
+            <div>
+              <div className="font-medium text-slate-800">Market Data</div>
+              <div>Vacancy rates, construction, absorption</div>
+            </div>
+            <div>
+              <div className="font-medium text-slate-800">Policy</div>
+              <div>Funding, regulations, budget analysis</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   )

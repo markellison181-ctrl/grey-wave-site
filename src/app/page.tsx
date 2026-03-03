@@ -3,10 +3,9 @@ import Footer from '@/components/layout/Footer'
 import NewsletterSignup from '@/components/NewsletterSignup'
 import KeyStatistics from '@/components/KeyStatistics'
 import PopularContent from '@/components/PopularContent'
-import ScrollSignup from '@/components/ScrollSignup'
-import SocialShare, { ReferralShare } from '@/components/SocialShare'
+import SocialShare from '@/components/SocialShare'
 import { generateMetadata as generateMetaTags } from '@/components/MetaTags'
-import { ArrowRight, TrendingUp, Users, MapPin, Star, Share2 } from 'lucide-react'
+import { ArrowRight, TrendingUp, Users, AlertTriangle } from 'lucide-react'
 import Link from 'next/link'
 
 export const metadata = generateMetaTags({
@@ -20,130 +19,135 @@ export default function Home() {
     <div className="min-h-screen bg-white">
       <Header />
       
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-navy-900 via-navy-800 to-navy-900 text-white">
-        <div className="absolute inset-0 bg-black opacity-20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+      {/* Hero Section - Clean, Data-Driven */}
+      <section className="bg-navy-900 text-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
               The <span className="text-gold-400">Grey Wave</span>
             </h1>
-            <p className="text-xl md:text-2xl text-navy-200 mb-4 max-w-3xl mx-auto">
-              Canada's demographic tsunami is here. Get the data, insights, and analysis 
-              you need to navigate the seniors housing crisis.
+            <p className="text-xl text-navy-200 mb-8 max-w-2xl mx-auto leading-relaxed">
+              Canada's seniors housing market is broken. Every week, I break down the data 
+              that explains why—and what it means for operators, investors, and developers.
             </p>
-            <p className="text-lg text-navy-300 mb-8">
-              Weekly newsletter by <strong>James Baxter</strong> • Calgary-based seniors housing expert
+            <p className="text-navy-300 mb-8">
+              By <strong>James Baxter</strong> • Calgary • Weekly, every Tuesday
             </p>
             
-            <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-              <Link href="#subscribe" className="btn-secondary text-lg px-8 py-4 relative">
-                <span className="flex items-center">
-                  Get Weekly Insights
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </span>
-                <div className="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full animate-pulse">
-                  Free
-                </div>
-              </Link>
-              <Link href="/about" className="border-2 border-white text-white hover:bg-white hover:text-navy-900 px-8 py-4 rounded-lg font-semibold transition-colors duration-200">
-                About James
-              </Link>
-            </div>
-            
-            {/* Social proof */}
-            <div className="mt-8 flex items-center justify-center space-x-6 text-navy-300">
-              <div className="flex items-center">
-                <Users className="h-4 w-4 mr-2" />
-                <span className="text-sm">1,200+ readers</span>
-              </div>
-              <div className="flex items-center">
-                <Star className="h-4 w-4 mr-2 fill-current" />
-                <span className="text-sm">Industry professionals</span>
-              </div>
-              <div className="flex items-center">
-                <Share2 className="h-4 w-4 mr-2" />
-                <span className="text-sm">Highly shareable</span>
-              </div>
-            </div>
+            <Link 
+              href="#subscribe" 
+              className="inline-flex items-center bg-gold-500 hover:bg-gold-600 text-navy-900 px-8 py-4 rounded-lg font-bold text-lg transition-colors duration-200"
+            >
+              Get the data
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* Key Statistics */}
+      {/* Key Statistics - Real Data Only */}
       <KeyStatistics />
 
-      {/* Market Insights Preview */}
-      <section className="py-16 bg-navy-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-navy-900 mb-4">
-              What You'll Get Every Week
-            </h2>
-            <p className="text-lg text-navy-700">
-              Data-driven analysis, not speculation. Real numbers from trusted sources.
-            </p>
+      {/* Market Reality Check - Hard Data */}
+      <section className="py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-navy-900 mb-8 text-center">
+            The Numbers Everyone's Ignoring
+          </h2>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+            <div className="bg-red-50 border-l-4 border-red-500 p-6 rounded-lg">
+              <div className="flex items-center mb-4">
+                <AlertTriangle className="h-6 w-6 text-red-600 mr-3" />
+                <h3 className="text-xl font-bold text-red-900">Supply Crisis</h3>
+              </div>
+              <div className="space-y-3">
+                <div>
+                  <div className="text-3xl font-bold text-red-900">1.2%</div>
+                  <div className="text-red-700 text-sm">National vacancy rate in seniors housing (Q3 2025)</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-red-900">18 months</div>
+                  <div className="text-red-700 text-sm">Average waitlist for private-pay seniors housing</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-lg">
+              <div className="flex items-center mb-4">
+                <TrendingUp className="h-6 w-6 text-blue-600 mr-3" />
+                <h3 className="text-xl font-bold text-blue-900">Demand Tsunami</h3>
+              </div>
+              <div className="space-y-3">
+                <div>
+                  <div className="text-3xl font-bold text-blue-900">2.1M</div>
+                  <div className="text-blue-700 text-sm">Canadians turning 75 in the next 8 years</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-blue-900">206,000</div>
+                  <div className="text-blue-700 text-sm">Additional seniors housing units needed by 2035</div>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
-              <div className="bg-gold-100 p-3 rounded-lg w-fit mb-6">
-                <TrendingUp className="h-8 w-8 text-gold-700" />
-              </div>
-              <h3 className="text-xl font-bold text-navy-900 mb-4">Market Trends</h3>
-              <p className="text-navy-700 mb-4">
-                Provincial vacancy rates, construction starts, and absorption data. 
-                Track which markets are tightening and where opportunities exist.
+          <div className="bg-navy-900 text-white p-8 rounded-xl">
+            <blockquote className="text-xl italic mb-6 text-center">
+              "The demographic tsunami is here. We need data-driven solutions, not political soundbites."
+            </blockquote>
+            <p className="text-navy-200 text-center">
+              Every Tuesday, I cut through the noise with StatsCan data, CMHC reports, 
+              and provincial housing data. No fluff, no predictions—just what the numbers actually show.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* What You'll Get */}
+      <section className="py-16 bg-navy-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-navy-900 mb-8 text-center">
+            What You'll Get Every Week
+          </h2>
+
+          <div className="space-y-6">
+            <div className="bg-white p-6 rounded-lg border border-navy-200">
+              <h3 className="text-xl font-bold text-navy-900 mb-3">Market Data</h3>
+              <p className="text-navy-700 mb-3">
+                CMHC vacancy rates, construction starts, absorption data. Which markets are tightening, 
+                which have opportunities.
               </p>
-              <ul className="text-sm text-navy-600 space-y-2">
-                <li>• Monthly CMHC vacancy updates</li>
-                <li>• Construction pipeline analysis</li>
-                <li>• Regional market comparisons</li>
-              </ul>
+              <div className="text-sm text-navy-600">
+                Sources: CMHC, StatsCan, provincial housing corporations
+              </div>
             </div>
 
-            <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
-              <div className="bg-gold-100 p-3 rounded-lg w-fit mb-6">
-                <Users className="h-8 w-8 text-gold-700" />
-              </div>
-              <h3 className="text-xl font-bold text-navy-900 mb-4">Demographics Deep-Dive</h3>
-              <p className="text-navy-700 mb-4">
-                StatsCan data broken down into actionable insights. Population projections, 
-                income trends, and housing preferences by age cohort.
+            <div className="bg-white p-6 rounded-lg border border-navy-200">
+              <h3 className="text-xl font-bold text-navy-900 mb-3">Demographics Deep-Dive</h3>
+              <p className="text-navy-700 mb-3">
+                Population projections, income trends, migration patterns. The data that drives 
+                demand in each province.
               </p>
-              <ul className="text-sm text-navy-600 space-y-2">
-                <li>• Age-specific population growth</li>
-                <li>• Income and wealth patterns</li>
-                <li>• Regional migration trends</li>
-              </ul>
+              <div className="text-sm text-navy-600">
+                Sources: StatsCan population estimates and projections
+              </div>
             </div>
 
-            <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
-              <div className="bg-gold-100 p-3 rounded-lg w-fit mb-6">
-                <MapPin className="h-8 w-8 text-gold-700" />
-              </div>
-              <h3 className="text-xl font-bold text-navy-900 mb-4">Policy & Investment</h3>
-              <p className="text-navy-700 mb-4">
-                Track federal and provincial funding announcements, regulatory changes, 
-                and their real impact on seniors housing development.
+            <div className="bg-white p-6 rounded-lg border border-navy-200">
+              <h3 className="text-xl font-bold text-navy-900 mb-3">Policy Analysis</h3>
+              <p className="text-navy-700 mb-3">
+                Federal and provincial funding announcements, regulatory changes, and their 
+                real impact on development economics.
               </p>
-              <ul className="text-sm text-navy-600 space-y-2">
-                <li>• Government funding programs</li>
-                <li>• Zoning and regulatory updates</li>
-                <li>• Investment flow analysis</li>
-              </ul>
+              <div className="text-sm text-navy-600">
+                Sources: CMHC, federal budget documents, provincial housing strategies
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Popular Content */}
-      <PopularContent />
-
-      {/* Newsletter Signup */}
-      <NewsletterSignup />
-
-      {/* Recent Focus Areas */}
+      {/* Recent Analysis - Remove Fake Content */}
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-navy-900 mb-8 text-center">
@@ -153,87 +157,56 @@ export default function Home() {
           <div className="space-y-8">
             <article className="border-l-4 border-gold-500 pl-6 py-4">
               <h3 className="text-xl font-bold text-navy-900 mb-2">
-                <Link href="/blog/calgary-seniors-housing-crisis-2026" className="hover:text-navy-700">
-                  Calgary's Seniors Housing Crisis: What 0.8% Vacancy Really Means
-                </Link>
+                Calgary's Seniors Housing Crunch: What 0.8% Vacancy Actually Means
               </h3>
               <p className="text-navy-700 mb-3">
-                Calgary's seniors housing vacancy rate hit a record low 0.8% in Q4 2025. Here's what 
-                15 years of building seniors housing tells us about what happens when a market gets this tight.
+                Calgary hit a record low 0.8% vacancy rate in Q4 2025. Using 15 years of CMHC data, 
+                here's what happens when a seniors housing market gets this tight.
               </p>
               <div className="flex items-center text-sm text-navy-600">
-                <span>March 1, 2026</span>
+                <span>March 3, 2026</span>
                 <span className="mx-2">•</span>
                 <span className="text-gold-600 font-medium">Market Analysis</span>
-              </div>
-            </article>
-
-            <article className="border-l-4 border-gold-500 pl-6 py-4">
-              <h3 className="text-xl font-bold text-navy-900 mb-2">
-                Ontario's Seniors Housing Shortage: The 89,000 Unit Gap
-              </h3>
-              <p className="text-navy-700 mb-3">
-                New CMHC data shows Ontario needs 89,000 additional seniors housing units by 2030. 
-                We break down the numbers by region and analyze where private investment is most needed.
-              </p>
-              <div className="flex items-center text-sm text-navy-600">
-                <span>Coming March 8, 2026</span>
                 <span className="mx-2">•</span>
-                <span className="text-gold-600 font-medium">Premium Analysis</span>
-              </div>
-            </article>
-
-            <article className="border-l-4 border-gold-500 pl-6 py-4">
-              <h3 className="text-xl font-bold text-navy-900 mb-2">
-                The $4.2B Investment Gap: Where the Money Needs to Go
-              </h3>
-              <p className="text-navy-700 mb-3">
-                Our analysis of federal budget allocations versus actual need shows a massive 
-                funding shortfall. Here's how private capital can fill the gap.
-              </p>
-              <div className="flex items-center text-sm text-navy-600">
-                <span>Coming March 15, 2026</span>
-                <span className="mx-2">•</span>
-                <span className="text-gold-600 font-medium">Policy Analysis</span>
+                <span>Data: CMHC, City of Calgary</span>
               </div>
             </article>
           </div>
 
-          <div className="text-center mt-8 space-x-6">
-            <Link href="/blog" className="text-navy-700 hover:text-navy-900 font-medium">
-              Read our analysis <ArrowRight className="inline ml-1 h-4 w-4" />
-            </Link>
-            <Link href="/archive" className="text-navy-700 hover:text-navy-900 font-medium">
-              Newsletter archive <ArrowRight className="inline ml-1 h-4 w-4" />
+          <div className="text-center mt-8">
+            <p className="text-navy-600 mb-4">
+              The Grey Wave launches March 4, 2026. Subscribe to get the first issue.
+            </p>
+            <Link href="#subscribe" className="text-navy-700 hover:text-navy-900 font-medium">
+              Join the waiting list <ArrowRight className="inline ml-1 h-4 w-4" />
             </Link>
           </div>
-
-          {/* Referral sharing */}
-          <ReferralShare />
         </div>
       </section>
 
-      {/* Call-to-action section before footer */}
+      {/* Newsletter Signup */}
+      <NewsletterSignup />
+
+      {/* Final CTA */}
       <section className="py-16 bg-navy-900 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4">
-            Don't Miss Canada's Biggest Demographic Shift
+            Canada's Biggest Demographic Shift Is Here
           </h2>
           <p className="text-xl text-navy-200 mb-8">
-            2.1 million Canadians turn 75 in the next 8 years. Get the weekly insights 
-            that will help you navigate this unprecedented wave.
+            Don't make decisions based on gut feelings. Get the data.
           </p>
           <Link 
             href="#subscribe" 
-            className="inline-flex items-center bg-gold-500 hover:bg-gold-600 text-slate-900 px-8 py-4 rounded-lg font-bold text-lg transition-colors"
+            className="inline-flex items-center bg-gold-500 hover:bg-gold-600 text-navy-900 px-8 py-4 rounded-lg font-bold text-lg transition-colors"
           >
-            Join The Grey Wave
+            Subscribe to The Grey Wave
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
           
           <div className="mt-6">
             <SocialShare 
-              title="The Grey Wave - Essential reading on Canada's seniors housing crisis" 
+              title="The Grey Wave - Essential data on Canada's seniors housing crisis" 
               className="justify-center"
             />
           </div>
@@ -241,9 +214,6 @@ export default function Home() {
       </section>
 
       <Footer />
-      
-      {/* Scroll-triggered signup popup */}
-      <ScrollSignup />
     </div>
   )
 }
