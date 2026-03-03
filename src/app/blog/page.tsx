@@ -30,7 +30,7 @@ export default function BlogIndex() {
             for Canada's seniors housing industry.
           </p>
           <p className="text-navy-300">
-            8 deep-dive reports • Updated weekly
+            9 deep-dive reports • Updated weekly
           </p>
         </div>
       </section>
@@ -82,6 +82,44 @@ export default function BlogIndex() {
             </Link>
 
             {/* March 3 Articles */}
+            <Link href="/blog/cmhc-mli-select-seniors-housing-guide" className="block group">
+              <article className="border-b border-navy-100 pb-16 hover:pb-12 transition-all duration-300">
+                <div className="flex flex-wrap items-center gap-4 text-sm text-navy-600 mb-6">
+                  <div className="flex items-center">
+                    <Calendar className="h-4 w-4 mr-2" />
+                    <span className="font-medium">March 3, 2026</span>
+                  </div>
+                  <div className="flex items-center">
+                    <User className="h-4 w-4 mr-2" />
+                    <span className="font-medium">James Baxter</span>
+                  </div>
+                  <span className="text-navy-500">22 min read</span>
+                </div>
+                
+                <h2 className="text-2xl md:text-3xl font-bold text-navy-900 mb-6 group-hover:text-navy-700 transition-colors leading-tight">
+                  The Developer's Guide to CMHC MLI Select for Seniors Housing: What Actually Gets Approved
+                </h2>
+                
+                <p className="text-lg text-navy-700 mb-8 leading-relaxed">
+                  The definitive guide to financing seniors housing through CMHC MLI Select. Points system breakdown, 
+                  approval criteria, loan terms, common mistakes, and what projects actually get funded in 2026. 
+                  Every developer and lender should bookmark this.
+                </p>
+                
+                <div className="flex flex-wrap items-center justify-between gap-4">
+                  <div className="flex flex-wrap gap-3 text-sm text-navy-600">
+                    <span className="bg-navy-100 px-3 py-1 rounded-full font-medium">Development Finance</span>
+                    <span className="bg-navy-100 px-3 py-1 rounded-full font-medium">CMHC</span>
+                    <span className="bg-navy-100 px-3 py-1 rounded-full font-medium">MLI Select</span>
+                  </div>
+                  <div className="inline-flex items-center text-navy-700 group-hover:text-navy-900 font-semibold group">
+                    Read guide
+                    <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
+              </article>
+            </Link>
+
             <Link href="/blog/saskatchewan-manitoba-seniors-housing-2026" className="block group">
               <article className="border-b border-navy-100 pb-16 hover:pb-12 transition-all duration-300">
                 <div className="flex flex-wrap items-center gap-4 text-sm text-navy-600 mb-6">
