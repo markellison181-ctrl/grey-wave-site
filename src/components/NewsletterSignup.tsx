@@ -61,22 +61,18 @@ export default function NewsletterSignup() {
   }
 
   return (
-    <div id="subscribe" className="bg-gradient-to-br from-slate-50 to-gold-50 py-16">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div className="flex justify-center mb-6">
-          <div className="bg-gold-500 p-3 rounded-full">
-            <Mail className="h-8 w-8 text-navy-900" />
-          </div>
+    <section id="subscribe" className="bg-navy-50 py-24">
+      <div className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12 text-center">
+        <div className="mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold text-navy-900 mb-6 leading-tight">
+            Join The Grey Wave
+          </h2>
+          
+          <p className="text-xl text-navy-700 mb-8 max-w-3xl mx-auto leading-relaxed">
+            Get weekly insights on Canada's aging population, seniors housing market data, 
+            and demographic trends. Every Tuesday, in your inbox.
+          </p>
         </div>
-        
-        <h2 className="text-3xl font-bold text-navy-900 mb-4">
-          Join The Grey Wave
-        </h2>
-        
-        <p className="text-xl text-slate-700 mb-8 max-w-2xl mx-auto">
-          Get weekly insights on Canada's aging population, seniors housing market data, 
-          and demographic trends. Every Tuesday, in your inbox.
-        </p>
 
         {referrer && (
           <p className="text-sm text-slate-600 mb-6 bg-gold-50 border border-gold-200 rounded-lg p-3 max-w-md mx-auto">
@@ -84,21 +80,21 @@ export default function NewsletterSignup() {
           </p>
         )}
 
-        <form onSubmit={handleSubmit} className="max-w-md mx-auto">
-          <div className="flex flex-col sm:flex-row gap-3">
+        <form onSubmit={handleSubmit} className="max-w-lg mx-auto">
+          <div className="flex flex-col sm:flex-row gap-4">
             <input
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="Enter your email"
+              placeholder="Enter your email address"
               required
               disabled={loading}
-              className="flex-1 px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-gold-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed"
+              className="flex-1 px-6 py-4 border border-navy-200 rounded-lg focus:ring-2 focus:ring-navy-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed text-lg bg-white shadow-sm"
             />
             <button
               type="submit"
               disabled={loading || !email}
-              className="bg-gold-500 hover:bg-gold-600 text-navy-900 px-6 py-3 rounded-lg font-semibold transition-colors duration-200 whitespace-nowrap disabled:opacity-50 disabled:cursor-not-allowed"
+              className="bg-navy-900 hover:bg-navy-800 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 whitespace-nowrap disabled:opacity-50 disabled:cursor-not-allowed hover:shadow-lg hover:-translate-y-0.5"
             >
               {loading ? 'Subscribing...' : 'Subscribe'}
             </button>
@@ -118,30 +114,30 @@ export default function NewsletterSignup() {
           </div>
         )}
 
-        <p className="mt-6 text-sm text-slate-600">
+        <p className="mt-8 text-navy-600">
           Weekly newsletter. No spam. Unsubscribe anytime.
         </p>
 
-        <div className="mt-8 pt-8 border-t border-slate-200">
-          <p className="text-sm text-slate-500 mb-4">
-            <strong>Data sources we track:</strong> Statistics Canada, CMHC, Provincial Housing Corporations, RHRA
+        <div className="mt-16 pt-12 border-t border-navy-200">
+          <p className="text-navy-500 mb-8 font-medium">
+            <strong className="text-navy-700">Data sources we track:</strong> Statistics Canada, CMHC, Provincial Housing Corporations, RHRA
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-slate-600">
-            <div>
-              <div className="font-medium text-slate-800">Demographics</div>
-              <div>Population projections, migration trends</div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-navy-600">
+            <div className="text-center">
+              <div className="font-semibold text-navy-900 text-lg mb-2">Demographics</div>
+              <div className="leading-relaxed">Population projections, migration trends</div>
             </div>
-            <div>
-              <div className="font-medium text-slate-800">Market Data</div>
-              <div>Vacancy rates, construction, absorption</div>
+            <div className="text-center">
+              <div className="font-semibold text-navy-900 text-lg mb-2">Market Data</div>
+              <div className="leading-relaxed">Vacancy rates, construction, absorption</div>
             </div>
-            <div>
-              <div className="font-medium text-slate-800">Policy</div>
-              <div>Funding, regulations, budget analysis</div>
+            <div className="text-center">
+              <div className="font-semibold text-navy-900 text-lg mb-2">Policy</div>
+              <div className="leading-relaxed">Funding, regulations, budget analysis</div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }

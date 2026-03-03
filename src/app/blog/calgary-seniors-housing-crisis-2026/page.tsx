@@ -22,36 +22,37 @@ export default function BlogPost() {
     <div className="min-h-screen bg-white">
       <Header />
       
-      <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <Link href="/" className="inline-flex items-center text-navy-600 hover:text-navy-900 mb-8">
+      <article className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12 py-20">
+        <Link href="/blog" className="inline-flex items-center text-navy-600 hover:text-navy-900 mb-12 font-medium">
           <ArrowLeft className="h-4 w-4 mr-2" />
-          Back to home
+          Back to Analysis
         </Link>
 
-        <header className="mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-navy-900 mb-6">
+        <header className="mb-16">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-navy-900 mb-8 leading-[1.1] tracking-tight">
             Calgary's Seniors Housing Crisis: What 0.8% Vacancy Really Means
           </h1>
           
-          <div className="flex items-center space-x-6 text-navy-600 mb-6">
+          <div className="flex flex-wrap items-center gap-6 text-navy-600 mb-8 text-lg">
             <div className="flex items-center">
-              <User className="h-4 w-4 mr-2" />
-              <span>James Baxter</span>
+              <User className="h-5 w-5 mr-3" />
+              <span className="font-medium">James Baxter</span>
             </div>
+            <span className="text-navy-400">•</span>
             <div className="flex items-center">
-              <Calendar className="h-4 w-4 mr-2" />
-              <span>March 1, 2026</span>
+              <Calendar className="h-5 w-5 mr-3" />
+              <span className="font-medium">March 1, 2026</span>
             </div>
           </div>
           
-          <p className="text-xl text-navy-700 leading-relaxed">
+          <p className="text-xl md:text-2xl text-navy-700 leading-[1.6] font-light">
             Calgary's seniors housing vacancy rate hit 0.8% in Q4 2025. That's not just a number — 
             it's a crisis with a waiting list attached. Here's what 15 years of building seniors housing 
             in Calgary has taught me about what happens next.
           </p>
         </header>
 
-        <div className="prose prose-lg max-w-none">
+        <div className="prose prose-lg prose-navy max-w-none prose-headings:font-bold prose-headings:text-navy-900 prose-p:text-navy-700 prose-p:text-lg prose-p:leading-[1.7] prose-li:text-navy-700 prose-li:text-lg prose-li:leading-[1.7] prose-strong:text-navy-900 prose-a:text-navy-700 prose-a:underline hover:prose-a:text-navy-900 prose-h2:text-3xl prose-h2:mt-16 prose-h2:mb-8">
           <p>
             Let's start with context. A 3-5% vacancy rate is considered healthy for seniors housing. 
             It allows for turnover, gives families choice, and operators can handle maintenance without 
