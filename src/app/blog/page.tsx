@@ -37,12 +37,49 @@ export default function BlogIndex() {
           
           <div className="space-y-16">
             {/* Featured Article */}
-            <Link href="/blog/bc-seniors-housing-paradox-2026" className="block group">
+            <Link href="/blog/saskatchewan-manitoba-seniors-housing-2026" className="block group">
               <article className="border-b border-navy-100 pb-16 hover:pb-12 transition-all duration-300">
                 <div className="flex flex-wrap items-center gap-4 text-sm text-navy-600 mb-6">
                   <span className="bg-gold-100 text-gold-800 px-4 py-2 rounded-full font-semibold">
                     Featured
                   </span>
+                  <div className="flex items-center">
+                    <Calendar className="h-4 w-4 mr-2" />
+                    <span className="font-medium">March 3, 2026</span>
+                  </div>
+                  <div className="flex items-center">
+                    <User className="h-4 w-4 mr-2" />
+                    <span className="font-medium">James Baxter</span>
+                  </div>
+                </div>
+                
+                <h2 className="text-3xl md:text-4xl font-bold text-navy-900 mb-6 group-hover:text-navy-700 transition-colors leading-tight">
+                  Saskatchewan & Manitoba Seniors Housing: The Forgotten Opportunity
+                </h2>
+                
+                <p className="text-xl text-navy-700 mb-8 leading-relaxed">
+                  While the coasts struggle with $8,000/month averages and tight land markets, the prairie provinces 
+                  offer compelling demographics and development economics that most operators overlook.
+                </p>
+                
+                <div className="flex flex-wrap items-center justify-between gap-4">
+                  <div className="flex flex-wrap gap-3 text-sm text-navy-600">
+                    <span className="bg-navy-100 px-3 py-1 rounded-full font-medium">Market Analysis</span>
+                    <span className="bg-navy-100 px-3 py-1 rounded-full font-medium">Prairie Provinces</span>
+                    <span className="bg-navy-100 px-3 py-1 rounded-full font-medium">Development</span>
+                  </div>
+                  <div className="inline-flex items-center text-navy-700 group-hover:text-navy-900 font-semibold group">
+                    Read full article
+                    <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
+              </article>
+            </Link>
+
+            {/* Recent Articles */}
+            <Link href="/blog/bc-seniors-housing-paradox-2026" className="block group">
+              <article className="border-b border-navy-100 pb-16 hover:pb-12 transition-all duration-300">
+                <div className="flex flex-wrap items-center gap-4 text-sm text-navy-600 mb-6">
                   <div className="flex items-center">
                     <Calendar className="h-4 w-4 mr-2" />
                     <span className="font-medium">March 3, 2026</span>
